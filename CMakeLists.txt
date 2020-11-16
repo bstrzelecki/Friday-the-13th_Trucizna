@@ -3,4 +3,4 @@ project(POP202_1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(POP202_1 main.cpp Deck.cpp Deck.h statics.h)
+add_executable(POP202_1 main.cpp Deck.cpp Deck.h statics.h GameState.cpp GameState.h)

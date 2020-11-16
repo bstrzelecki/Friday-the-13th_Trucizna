@@ -17,7 +17,7 @@ void sort(int* array, int length){
     }
 }
 
-void Deck::DisplayDeck() {
+void Deck::DisplayDeck() const {
     for(int i = 0; i < deckSize; i++){
         Deck::displayCard(deck[i]);
     }
@@ -26,27 +26,18 @@ void Deck::DisplayDeck() {
 Deck::Deck(Settings settings, int *values) {
     deckSize = settings.totalCards;
     cardNumber = deckSize;
-    deck= new Card[deckSize];
+    deck= (Card*)malloc(deckSize*sizeof(Card));
     initializeGreenCards(settings.greenCards, settings.greenCardValue);
     sort(values, settings.cardCount);
     initializeCards(settings, values);
 }
-Deck::Deck(const Deck &deck) {
-    deckSize = deck.deckSize;
-    cardNumber = deckSize;
-    std::memcpy(this->deck, deck.deck, deckSize*sizeof(Deck));
-}
-Deck::~Deck() {
-    delete [] deck;
-}
-
-void Deck::initializeGreenCards(int count, int value) {
+void Deck::initializeGreenCards(int count, int value) const {
     for(int i = 0; i < count;i++){
         deck[i] = {value, GREEN};
     }
 }
 
-void Deck::initializeCards(Settings settings, int *values) {
+void Deck::initializeCards(Settings settings, int *values) const {
     int j = 0;
     int color = 1;
     for(int i = settings.greenCards; i < settings.totalCards; i++,j++){
@@ -62,19 +53,17 @@ void Deck::displayCard(Card card) {
     std::cout<<card.value << " ";
     std::cout<<colors[card.color]<<" ";
 }
-
-Deck &Deck::operator=(const Deck& d) {
-    deckSize = d.deckSize;
-    std::memcpy(this->deck, d.deck, deckSize*sizeof(Deck));
-    return *this;
-}
 //TEST ME
-Deck::Deck(Card *cards, int length) {
+Deck::Deck(Card cards[], int length) {
     deckSize = length;
     cardNumber = length;
-    std::memcpy(deck, cards, deckSize*sizeof(Card));
+
+    deck = (Card*)malloc(deckSize*sizeof(Card));
+    for(int i = 0; i < deckSize;i++){
+        deck[i].color = cards[i].color;
+        deck[i].value = cards[i].value;
+    }
 }
-//TEST ME
 Card Deck::RemoveCard(int position) {
     Card removed = deck[position];
     for(int i = position; i < cardNumber - 1; i++){
@@ -84,5 +73,3 @@ Card Deck::RemoveCard(int position) {
     cardNumber--;
     return removed;
 }
-
-

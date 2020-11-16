@@ -1,6 +1,9 @@
 #ifndef definitions
 #define definitions
 
+#define MAX_PLAYERS 6
+#define MAX_CARDS_ON_HAND 70
+
 #define GREEN 0
 #define BLUE 1
 #define RED 2
@@ -25,6 +28,7 @@ typedef struct {
 }Card;
 
 typedef struct {
+    int players;
     int crucibles;
     int greenCards;
     int greenCardValue;

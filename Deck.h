@@ -2,18 +2,15 @@
 
 class Deck {
 public:
-    void DisplayDeck();
+    void DisplayDeck() const;
     Deck(Settings settings, int* values);
     Deck(Card* cards, int length);
-    Deck(const Deck& deck);
-    ~Deck();
-    Deck& operator=(const Deck& d);
     Card RemoveCard(int position);
-private:
-    Card* deck;
-    int deckSize;
     int cardNumber;
-    void initializeGreenCards(int count, int value);
-    void initializeCards(Settings settings, int* values);
+    Card* deck;
+private:
+    int deckSize;
+    void initializeGreenCards(int count, int value) const;
+    void initializeCards(Settings settings, int* values) const;
     static void displayCard(Card card);
 };

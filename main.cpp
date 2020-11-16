@@ -1,6 +1,6 @@
 #include <iostream>
 #include "statics.h"
-#include "Deck.h"
+#include "GameState.h"
 
 int* getCardValues(int count){
     int* values = new int[count];
@@ -12,10 +12,10 @@ int* getCardValues(int count){
     return values;
 }
 Settings getSettings(){
-    int k,g,gv,o;
-    std::cin>>k>>g>>gv>>o;
+    int n,k,g,gv,o;
+    std::cin>>n>>k>>g>>gv>>o;
     return {
-            k,g,gv,o,g+k*o
+            n,k,g,gv,o,g+k*o
     };
 }
 
@@ -26,7 +26,9 @@ int main() {
     Deck deck(settings, values);
     delete [] values;
 
-    deck.DisplayDeck();
+    GameState gameState(settings, deck);
+
+    gameState.DisplayState();
 
 
 
