@@ -6,7 +6,9 @@
 class GameState {
 public:
     GameState(Settings settings, Deck& deck);
+    GameState(int players, Card playerCards[MAX_PLAYERS][MAX_CARDS_ON_HAND],Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], int* cardsPerPlayer, int* cardsOnHold);
     void DisplayState();
+    void DisplayCardCount();
     ~GameState();
 private:
     void dealCards(Deck& deck, int players);

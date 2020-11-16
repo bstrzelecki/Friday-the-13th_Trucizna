@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/mabat/CLionProjects/POP202_1/GameState.h">
 			<Option target="POP202_1"/>
 		</Unit>
+		<Unit filename="C:/Users/mabat/CLionProjects/POP202_1/StateParser.cpp">
+			<Option target="POP202_1"/>
+		</Unit>
+		<Unit filename="C:/Users/mabat/CLionProjects/POP202_1/StateParser.h">
+			<Option target="POP202_1"/>
+		</Unit>
 		<Unit filename="C:/Users/mabat/CLionProjects/POP202_1/main.cpp">
 			<Option target="POP202_1"/>
 		</Unit>

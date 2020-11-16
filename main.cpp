@@ -1,7 +1,7 @@
 #include <iostream>
 #include "statics.h"
 #include "GameState.h"
-
+#include "StateParser.h"
 int* getCardValues(int count){
     int* values = new int[count];
     int input;
@@ -20,15 +20,17 @@ Settings getSettings(){
 }
 
 int main() {
-    Settings settings = getSettings();
-    int* values = getCardValues(settings.cardCount);
+    //Settings settings = getSettings();
+    //int* values = getCardValues(settings.cardCount);
 
-    Deck deck(settings, values);
-    delete [] values;
+    //Deck deck(settings, values);
+    //delete [] values;
 
-    GameState gameState(settings, deck);
+    //GameState gameState(settings, deck);
 
-    gameState.DisplayState();
+    GameState gameState = StateParser::ReadFromStream();
+
+    gameState.DisplayCardCount();
 
 
 

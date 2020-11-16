@@ -7,9 +7,9 @@ public:
     Deck(Card* cards, int length);
     Card RemoveCard(int position);
     int cardNumber;
+    int deckSize;
     Card* deck;
 private:
-    int deckSize;
     void initializeGreenCards(int count, int value) const;
     void initializeCards(Settings settings, int* values) const;
     static void displayCard(Card card);

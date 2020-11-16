@@ -18,7 +18,7 @@ void sort(int* array, int length){
 }
 
 void Deck::DisplayDeck() const {
-    for(int i = 0; i < deckSize; i++){
+    for(int i = 0; i < cardNumber; i++){
         Deck::displayCard(deck[i]);
     }
 }
@@ -53,7 +53,6 @@ void Deck::displayCard(Card card) {
     std::cout<<card.value << " ";
     std::cout<<colors[card.color]<<" ";
 }
-//TEST ME
 Deck::Deck(Card cards[], int length) {
     deckSize = length;
     cardNumber = length;

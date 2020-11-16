@@ -1,3 +1,0 @@
-C:/Users/mabat/CLionProjects/POP202_1/out/build/x64-Debug (default)/CMakeFiles/POP202_1.dir
-C:/Users/mabat/CLionProjects/POP202_1/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
-C:/Users/mabat/CLionProjects/POP202_1/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

@@ -17,7 +17,9 @@ void GameState::DisplayState() {
     for(int i = 0; i < playersNumber; i++){
         std::cout<<i+1<<" player hand cards: ";
         playerHand[i].DisplayDeck();
-        std::cout<<"\n"<<i+1<<" player deck cards:\n";
+        std::cout<<"\n"<<i+1<<" player deck cards: ";
+        playerDeck[i].DisplayDeck();
+        std::cout<<"\n";
     }
     for(int i = 1; i < piles + 1; i++){
         std::cout<<i<<" pile cards: "<<"\n";
@@ -25,7 +27,7 @@ void GameState::DisplayState() {
 }
 
 void GameState::dealCards(Deck& deck, int players) {
-    Card cards[MAX_PLAYERS][30];
+    Card cards[MAX_PLAYERS][MAX_CARDS_ON_HAND];
     int cardsGiven[MAX_PLAYERS] = {};
     int dealingTo = 0;
     int cardNumber = 0;
@@ -47,4 +49,23 @@ void GameState::dealCards(Deck& deck, int players) {
 GameState::~GameState() {
     free(playerHand);
     free(playerDeck);
+}
+
+GameState::GameState(int players, Card playerCards[MAX_PLAYERS][MAX_CARDS_ON_HAND],Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], int* cardsPerPlayer, int* cardsOnHold) {
+    playersNumber = players;
+    activePlayer = 1;
+    piles = 0;
+    playerHand = (Deck*)std::malloc(sizeof(Deck)*playersNumber);
+    playerDeck = (Deck*)std::malloc(sizeof(Deck)*playersNumber);
+    for(int i = 0; i < players; i++){
+        playerHand[i] = Deck(playerCards[i], cardsPerPlayer[i]);
+        playerDeck[i] = Deck(cardsInDeck[i], cardsOnHold[i]);
+    }
+}
+
+void GameState::DisplayCardCount() {
+    for(int i = 0; i < playersNumber; i++){
+        std::cout<<i+1<<" player has "<<playerHand[i].cardNumber<<" cards on hand"<<"\n";
+        std::cout<<i+1<<" player has "<<playerDeck[i].cardNumber<<" cards in front of him"<<"\n";
+    }
 }
