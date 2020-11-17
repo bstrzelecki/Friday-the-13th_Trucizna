@@ -3,6 +3,8 @@
 
 #define MAX_PLAYERS 6
 #define MAX_CARDS_ON_HAND 70
+#define MAX_PILES 6
+#define COLORS 7
 
 #define GREEN 0
 #define BLUE 1

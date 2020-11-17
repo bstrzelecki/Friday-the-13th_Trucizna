@@ -10,19 +10,17 @@ C:/Users/mabat/CLionProjects/POP202_1/Deck.h
 statics.h
 C:/Users/mabat/CLionProjects/POP202_1/statics.h
 
+C:/Users/mabat/CLionProjects/POP202_1/GameState.cpp
+cstdlib
+-
+iostream
+-
+GameState.h
+C:/Users/mabat/CLionProjects/POP202_1/GameState.h
+
 C:/Users/mabat/CLionProjects/POP202_1/GameState.h
 Deck.h
 C:/Users/mabat/CLionProjects/POP202_1/Deck.h
-
-C:/Users/mabat/CLionProjects/POP202_1/StateParser.cpp
-iostream
--
-StateParser.h
-C:/Users/mabat/CLionProjects/POP202_1/StateParser.h
-
-C:/Users/mabat/CLionProjects/POP202_1/StateParser.h
-GameState.h
-C:/Users/mabat/CLionProjects/POP202_1/GameState.h
 
 C:/Users/mabat/CLionProjects/POP202_1/statics.h
 

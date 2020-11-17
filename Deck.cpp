@@ -72,3 +72,28 @@ Card Deck::RemoveCard(int position) {
     cardNumber--;
     return removed;
 }
+
+int Deck::GetColorCount(int colorId) {
+    int count = 0;
+    for(int i = 0; i < cardNumber;i++){
+        if(deck[i].color==colorId)
+            count++;
+    }
+    return count;
+}
+
+int Deck::GetGreenCardsValue() {
+    int value = -1;
+    for(int i = 0; i < cardNumber;i++){
+        if(deck[i].color == GREEN){
+            if(value == -1)
+                value = deck[i].value;
+            if(value != -1 && value != deck[i].value)
+            {
+                value = -2;
+                break;
+            }
+        }
+    }
+    return value;
+}

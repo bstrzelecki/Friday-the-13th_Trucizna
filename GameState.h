@@ -6,9 +6,11 @@
 class GameState {
 public:
     GameState(Settings settings, Deck& deck);
-    GameState(int players, Card playerCards[MAX_PLAYERS][MAX_CARDS_ON_HAND],Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], int* cardsPerPlayer, int* cardsOnHold);
+    GameState(Settings settings, Card playerCards[MAX_PLAYERS][MAX_CARDS_ON_HAND],Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card cardsOnPiles[MAX_PLAYERS][MAX_CARDS_ON_HAND], int* cardsPerPlayer, int* cardsOnHold, int* numberCardsOnPiles);
     void DisplayState();
     void DisplayCardCount();
+    void ValidateGreenCards();
+    void ValidateCards();
     ~GameState();
 private:
     void dealCards(Deck& deck, int players);
@@ -17,6 +19,7 @@ private:
     int playersNumber;
     Deck* playerHand;
     Deck* playerDeck;
+    Deck* pileDeck;
 };
 
 

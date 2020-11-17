@@ -6,6 +6,8 @@ public:
     Deck(Settings settings, int* values);
     Deck(Card* cards, int length);
     Card RemoveCard(int position);
+    int GetColorCount(int colorId);
+    int GetGreenCardsValue();
     int cardNumber;
     int deckSize;
     Card* deck;

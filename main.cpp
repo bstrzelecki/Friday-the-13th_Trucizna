@@ -30,7 +30,7 @@ int main() {
 
     GameState gameState = StateParser::ReadFromStream();
 
-    gameState.DisplayCardCount();
+    gameState.ValidateCards();
 
 
 

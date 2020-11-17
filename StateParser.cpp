@@ -32,22 +32,39 @@ int loadLine(int i, Card deck[MAX_PLAYERS][MAX_CARDS_ON_HAND]){
         char color[COLOR_MAX_LENGTH];
         if(!(std::cin>>value))break;
         if(!(std::cin>>color))break;
-        int isValid = 0;
+
         if(compare(color,"player") != 0) {
             break;
         }
-        for(auto c : colors){
-            if(compare(color,c) == 0){
-                isValid = 1;
-                break;
-            }
-        }
-        if(!isValid) {
-            break;
-        }
+        if(getColorFromName(color)==-1)break;
         deck[i][cards++]={value, getColorFromName(color)};
     }
     return cards;
+}
+int getColorCount(int colorId, Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], int players, const int* cardsGiven, const int* cardsOnHold){
+    int count = 0;
+    for(int i = 0; i < players; i++){
+        for(int j = 0; j < cardsGiven[i];j++){
+            if(cardsOnHand[i][j].color==colorId){
+                count++;
+            }
+        }
+        for(int j = 0; j < cardsOnHold[i];j++){
+            if(cardsInDeck[i][j].color==colorId){
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
+int getCrucibleCount(Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], int players, const int* cardsGiven, const int* cardsOnHold){
+    int uniqueColors = 0;
+    for(int i = 1; i < COLORS; i++){
+        if(getColorCount(i, cardsOnHand, cardsInDeck, players, cardsGiven, cardsOnHold)>0)
+            uniqueColors++;
+    }
+    return uniqueColors;
 }
 GameState StateParser::ReadFromStream() {
     int playersNumber;
@@ -61,6 +78,7 @@ GameState StateParser::ReadFromStream() {
     int cardsOnHold[MAX_PLAYERS] = {};
     for(int i = 0; i < playersNumber;i++){
         std::cin>>discard>>discard;
+
         if(i==0){
             std::cin>>discard>>discard;
         }
@@ -68,5 +86,20 @@ GameState StateParser::ReadFromStream() {
         std::cin>>discard>>discard;
         cardsOnHold[i] = loadLine(i, cardsInDeck);
     }
-    return GameState(playersNumber, cardsOnHand, cardsInDeck, cardsGiven, cardsOnHold);
+    Card cardsOnPiles[MAX_PILES][MAX_CARDS_ON_HAND];
+    int numberCardOnPiles[MAX_PILES];
+    int piles = getCrucibleCount(cardsOnHand, cardsInDeck, playersNumber, cardsGiven, cardsOnHold);
+    for(int i = 0; i < piles; i++){
+        std::cin>>discard;
+        numberCardOnPiles[i]=loadLine(i,cardsOnPiles);
+    }
+    Settings settings{
+        playersNumber,
+        piles,
+        0,
+        0,
+        0,
+        0
+    };
+    return GameState(settings, cardsOnHand, cardsInDeck, cardsOnPiles, cardsGiven, cardsOnHold, numberCardOnPiles);
 }
