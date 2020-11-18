@@ -3,9 +3,10 @@
 #include "GameState.h"
 
 GameState::GameState(Settings settings, Deck& deck) {
-    activePlayer = 1;
+    activePlayer = 0;
     playersNumber = settings.players;
     piles = settings.crucibles;
+    explosionThreshold = 13;
     playerHand = (Deck*)std::malloc(sizeof(Deck)*playersNumber);
     playerDeck = (Deck*)std::malloc(sizeof(Deck)*playersNumber);
     pileDeck = (Deck*)std::malloc(sizeof(Deck)*piles);
@@ -13,8 +14,9 @@ GameState::GameState(Settings settings, Deck& deck) {
 }
 
 void GameState::DisplayState() {
-    std::cout<<"active player = "<<activePlayer<<"\n";
+    std::cout<<"active player = "<<activePlayer+1<<"\n";
     std::cout<<"players number = "<<playersNumber<<"\n";
+    std::cout<<"explosion threshold = "<<explosionThreshold<<"\n";
     for(int i = 0; i < playersNumber; i++){
         std::cout<<i+1<<" player hand cards: ";
         playerHand[i].DisplayDeck();
@@ -22,9 +24,10 @@ void GameState::DisplayState() {
         playerDeck[i].DisplayDeck();
         std::cout<<"\n";
     }
-    for(int i = 1; i < piles + 1; i++){
-        std::cout<<i<<" pile cards: "<<"\n";
+    for(int i = 0; i < piles; i++){
+        std::cout<<i+1<<" pile cards: ";
         pileDeck[i].DisplayDeck();
+        std::cout<<"\n";
     }
 }
 
@@ -55,7 +58,8 @@ GameState::~GameState() {
 
 GameState::GameState(Settings settings, Card playerCards[MAX_PLAYERS][MAX_CARDS_ON_HAND],Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card cardsOnPiles[MAX_PLAYERS][MAX_CARDS_ON_HAND], int* cardsPerPlayer, int* cardsOnHold, int* numberCardsOnPiles) {
     playersNumber = settings.players;
-    activePlayer = 1;
+    activePlayer = settings.activePlayer - 1;
+    explosionThreshold = settings.explosionThreshold;
     piles = settings.crucibles;
     playerHand = (Deck*)std::malloc(sizeof(Deck)*playersNumber);
     playerDeck = (Deck*)std::malloc(sizeof(Deck)*playersNumber);
@@ -79,7 +83,7 @@ void GameState::DisplayCardCount() {
     }
 }
 
-void GameState::ValidateGreenCards() {
+VALIDATION_RESULT GameState::ValidateGreenCards() {
     int greenValue = -1;
     int greenCount = 0;
     for(int i = 0; i < playersNumber; i++){
@@ -92,30 +96,30 @@ void GameState::ValidateGreenCards() {
     if(greenCount == 0)
     {
         std::cout<<"Green cards does not exist";
-        return;
+        return VALIDATION_ERROR;
     }
     for(int i = 0; i < playersNumber; i++) {
         int tempVal = playerHand[i].GetGreenCardsValue();
         if(tempVal == -2){
             std::cout << "Different green cards values occurred";
-            return;
+            return VALIDATION_ERROR;
         }
         if (tempVal > 0) {
             if (greenValue != -1 && tempVal != greenValue) {
                 std::cout << "Different green cards values occurred";
-                return;
+                return VALIDATION_ERROR;
             }
             greenValue = tempVal;
         }
         tempVal = playerDeck[i].GetGreenCardsValue();
         if(tempVal == -2){
             std::cout << "Different green cards values occurred";
-            return;
+            return VALIDATION_ERROR;
         }
         if (tempVal >0) {
             if (greenValue != -1 && tempVal != greenValue) {
                std::cout << "Different green cards values occurred";
-               return;
+               return VALIDATION_ERROR;
             }
             greenValue = tempVal;
         }
@@ -124,20 +128,21 @@ void GameState::ValidateGreenCards() {
         int tempVal = pileDeck[i].GetGreenCardsValue();
         if(tempVal == -2){
             std::cout << "Different green cards values occurred";
-            return;
+            return VALIDATION_ERROR;
         }
         if(tempVal>0){
             if(greenValue!=-1&&tempVal!=greenValue){
                 std::cout<<"Different green cards values occurred";
-                return;
+                return VALIDATION_ERROR;
             }
             greenValue = tempVal;
         }
     }
     std::cout<<"Found "<<greenCount<<" green cards, all with "<<greenValue<<" value";
+    return VALIDATION_SUCCESS;
 }
 
-void GameState::ValidateCards() {
+VALIDATION_RESULT GameState::ValidateCards() {
     int count[COLORS]={};
     for(int i = 0; i < playersNumber;i++){
         for(int j = 0; j < COLORS; j++){
@@ -161,11 +166,150 @@ void GameState::ValidateCards() {
                         std::cout<<colors[k]<<" cards are "<<count[k]<<"\n";
                     }
                 }
-                return;
+                return VALIDATION_ERROR;
             }
         }
     }
     int i = 1;
     while(count[i]==0)i++;
     std::cout<<"The number cards of all colors is equal: "<<count[i];
+    return VALIDATION_SUCCESS;
+}
+void displayColorValues(int valueCount[COLORS][MAX_VALUE]){
+    for(int i = 1; i < COLORS; i++){
+        std::cout<<colors[i]<<" cards values: ";
+        for(int j = 0; j < MAX_VALUE; j++){
+            for(int k = 0; k < valueCount[i][j];k++){
+                std::cout<<j<<" ";
+            }
+        }
+        std::cout<<"\n";
+    }
+}
+VALIDATION_RESULT GameState::ValidateCardValues() {
+    int valueCount[COLORS][MAX_VALUE] = {};
+    for(int i = 0; i < playersNumber; i++){
+        for(int j = 0; j < playerHand[i].cardNumber;j++){
+            Card card = playerHand[i].deck[j];
+            valueCount[card.color][card.value]++;
+        }
+        for(int j = 0; j < playerDeck[i].cardNumber;j++){
+            Card card = playerDeck[i].deck[j];
+            valueCount[card.color][card.value]++;
+        }
+    }
+    for(int i = 0; i < piles; i++){
+        for(int j = 0; j < pileDeck[i].cardNumber;j++){
+            Card card = pileDeck[i].deck[j];
+            valueCount[card.color][card.value]++;
+        }
+    }
+    for(int i = 1; i < piles; i++){
+        for(int j = 1; j < piles; j++){
+            if(i==j)continue;
+            for(int k = 0; k < MAX_VALUE; k++){
+                if(valueCount[i][k]!=valueCount[j][k]){
+                    std::cout<<"The values of cards of all colors are not identical:\n";
+                    displayColorValues(valueCount);
+                    return VALIDATION_ERROR;
+                }
+            }
+        }
+    }
+    std::cout<<"The values of cards of all colors are identical:\n";
+    for(int j = 0; j < MAX_VALUE; j++){
+        for(int k = 0; k < valueCount[BLUE][j];k++){
+            std::cout<<j<<" ";
+        }
+    }
+    std::cout<<"\n";
+    return VALIDATION_SUCCESS;
+}
+
+VALIDATION_RESULT GameState::ValidatePiles() {
+    int valid = VALIDATION_SUCCESS;
+    for(int i = 0; i < piles; i++){
+        int col = 0;
+        for(int j = 1; j < COLORS; j++){
+            int count = pileDeck[i].GetColorCount(j);
+            if(count!=0){
+                if(col==0){
+                    col = j;
+                }else{
+                    std::cout<<"Two different colors were found on the "<<i+1<<" pile\n";
+                    valid = VALIDATION_ERROR;
+                    break;
+                }
+            }
+        }
+    }
+    for(int i = 0; i < piles; i++){
+        if(pileDeck[i].GetCardsValue() > explosionThreshold){
+            std::cout<<"Pile number "<<i+1<<" should explode earlier\n";
+            valid = VALIDATION_ERROR;
+        }
+    }
+    return valid;
+}
+
+VALIDATION_RESULT GameState::ValidateHands() {
+    for(int i = 0; i < playersNumber - 1; i++){
+        if(playerHand[i].cardNumber==playerHand[i+1].cardNumber){
+            continue;
+        }
+        if(playerHand[i].cardNumber==(playerHand[i+1].cardNumber+1)){
+            continue;
+        }
+        if((i+1)==(activePlayer)&&playerHand[i].cardNumber==(playerHand[i+1].cardNumber-1))
+        {
+            continue;
+        }
+        std::cout<<"The number of players cards on hand is wrong\n";
+        return VALIDATION_ERROR;
+    }
+    return VALIDATION_SUCCESS;
+}
+
+void GameState::Play(int cardPosition, int pileIfGreen) {
+    int currentPlayer = activePlayer;
+    Card card = playerHand[activePlayer].RemoveCard(cardPosition);
+    activePlayer++;
+    if(activePlayer > playersNumber-1)
+        activePlayer = 0;
+    if(card.color == GREEN){
+        pileDeck[pileIfGreen].AddCard(card);
+    }else{
+        for(int i = 0; i < piles; i++){
+            if(pileDeck[i].GetColorCount(card.color)>0){
+                pileDeck[i].AddCard(card);
+                handleExplosion(currentPlayer, i);
+                return;
+            }
+        }
+        for(int i = 0; i < piles; i++){
+            int isEmpty = 1;
+            for(int j = 1; j < COLORS; j++){
+                if(pileDeck[i].GetColorCount(j)!=0)
+                {
+                    isEmpty = 0;
+                    break;
+                }
+            }
+            if(isEmpty == 1){
+                pileDeck[i].AddCard(card);
+                handleExplosion(currentPlayer, i);
+                return;
+            }
+        }
+
+    }
+}
+
+void GameState::handleExplosion(int player, int pile) {
+    if(pileDeck[pile].GetCardsValue()>explosionThreshold){
+        while(pileDeck[pile].cardNumber>0){
+            Card card = pileDeck[pile].RemoveCard(0);
+            playerDeck[player].AddCard(card);
+        }
+    }
 }

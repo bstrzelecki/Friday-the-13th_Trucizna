@@ -30,9 +30,16 @@ int main() {
 
     GameState gameState = StateParser::ReadFromStream();
 
-    gameState.ValidateCards();
 
-
-
+    gameState.Play(0);
+    gameState.DisplayState();
+    /*
+    VALIDATION_RESULT a = gameState.ValidateHands();
+    VALIDATION_RESULT b = gameState.ValidatePiles();
+    if(a==VALIDATION_SUCCESS&&b==VALIDATION_SUCCESS)
+    {
+        std::cout<<"Current state of the game is ok";
+    }
+     */
     return 0;
 }

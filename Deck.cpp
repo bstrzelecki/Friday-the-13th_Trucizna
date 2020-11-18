@@ -73,7 +73,26 @@ Card Deck::RemoveCard(int position) {
     return removed;
 }
 
-int Deck::GetColorCount(int colorId) {
+void Deck::AddCard(Card card) {
+    if(cardNumber < deckSize){
+        deck[cardNumber] = card;
+        cardNumber++;
+    }else{
+        Card* oldDeck = deck;
+        cardNumber++;
+        deck = (Card*)malloc(cardNumber*sizeof(Card));
+        for(int i = 0; i < cardNumber - 1;i++){
+            deck[i].color = oldDeck[i].color;
+            deck[i].value = oldDeck[i].value;
+        }
+        deck[cardNumber-1].color = card.color;
+        deck[cardNumber-1].value = card.value;
+        deckSize = cardNumber;
+        free(oldDeck);
+    }
+}
+
+int Deck::GetColorCount(int colorId) const {
     int count = 0;
     for(int i = 0; i < cardNumber;i++){
         if(deck[i].color==colorId)
@@ -82,7 +101,7 @@ int Deck::GetColorCount(int colorId) {
     return count;
 }
 
-int Deck::GetGreenCardsValue() {
+int Deck::GetGreenCardsValue() const {
     int value = -1;
     for(int i = 0; i < cardNumber;i++){
         if(deck[i].color == GREEN){
@@ -96,4 +115,12 @@ int Deck::GetGreenCardsValue() {
         }
     }
     return value;
+}
+
+int Deck::GetCardsValue() const{
+    int sum = 0;
+    for(int i = 0; i < cardNumber; i++){
+        sum+=deck[i].value;
+    }
+    return sum;
 }

@@ -69,9 +69,11 @@ int getCrucibleCount(Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card card
 GameState StateParser::ReadFromStream() {
     int playersNumber;
     int activePlayer;
+    int explosionThreshold;
     char discard[32];
     std::cin>>discard>>discard>>discard>>activePlayer;
     std::cin>>discard>>discard>>discard>>playersNumber;
+    std::cin>>discard>>discard>>discard>>explosionThreshold;
     Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND];
     Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND];
     int cardsGiven[MAX_PLAYERS] = {};
@@ -99,7 +101,9 @@ GameState StateParser::ReadFromStream() {
         0,
         0,
         0,
-        0
+        0,
+        explosionThreshold,
+        activePlayer
     };
     return GameState(settings, cardsOnHand, cardsInDeck, cardsOnPiles, cardsGiven, cardsOnHold, numberCardOnPiles);
 }
