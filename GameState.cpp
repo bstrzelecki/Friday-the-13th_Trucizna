@@ -313,3 +313,37 @@ void GameState::handleExplosion(int player, int pile) {
         }
     }
 }
+
+void GameState::DisplayScore() {
+    int max[COLORS];
+    for(int i = 1; i < COLORS; i++){
+        int localMax = -1;
+        int maxValue = 0;
+        int unique = 1;
+        for(int j = 0; j < playersNumber; j++){
+            int count = playerDeck[j].GetColorCount(i);
+            if(count > maxValue){
+                maxValue = count;
+                unique = 1;
+                localMax = j;
+            }else if (count == maxValue){
+                unique = 0;
+            }
+        }
+        if(unique == 0){
+            localMax = -1;
+        }
+        max[i] = localMax;
+    }
+    int immunity[MAX_PLAYERS][COLORS] = {};
+    for(int i = 1; i < COLORS; i++){
+        if(max[i]!=-1){
+            immunity[max[i]][i] = 1;
+            std::cout<<"Na kolor "<<colors[i]<<" odporny jest gracz "<<max[i]+1<<"\n";
+        }
+    }
+    int score[MAX_PLAYERS] = {};
+    for(int i = 0; i < playersNumber; i++){
+        std::cout<<"Wynik gracza "<<i+1<<" = "<<playerDeck[i].GetFinalValue(immunity[i])<<"\n";
+    }
+}

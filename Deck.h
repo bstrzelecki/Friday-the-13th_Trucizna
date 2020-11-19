@@ -10,6 +10,7 @@ public:
     int GetColorCount(int colorId) const;
     int GetGreenCardsValue() const;
     int GetCardsValue() const;
+    int GetFinalValue(const int immunity[]);
     int cardNumber;
     int deckSize;
     Card* deck;

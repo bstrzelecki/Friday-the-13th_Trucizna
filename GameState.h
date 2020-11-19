@@ -10,6 +10,7 @@ public:
     void DisplayState();
     void DisplayCardCount();
     void Play(int card, int pileIfGreen = 0);
+    void DisplayScore();
     VALIDATION_RESULT ValidateGreenCards();
     VALIDATION_RESULT ValidateCards();
     VALIDATION_RESULT ValidateCardValues();

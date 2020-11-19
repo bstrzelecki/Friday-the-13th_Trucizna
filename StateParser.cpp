@@ -10,19 +10,19 @@ int compare(const char a[], const char b[]){
 }
 int getColorFromName(char* name){
     if(compare(name, "green") != 0)
-        return 0;
+        return GREEN;
     if(compare(name, "blue") != 0)
-        return 1;
+        return BLUE;
     if(compare(name, "red") != 0)
-        return 2;
+        return RED;
     if(compare(name, "violet") != 0)
-        return 3;
+        return VIOLET;
     if(compare(name, "yellow") != 0)
-        return 4;
+        return YELLOW;
     if(compare(name, "white") != 0)
-        return 5;
+        return WHITE;
     if(compare(name, "black") != 0)
-        return 6;
+        return BLACK;
     return -1;
 }
 int loadLine(int i, Card deck[MAX_PLAYERS][MAX_CARDS_ON_HAND]){

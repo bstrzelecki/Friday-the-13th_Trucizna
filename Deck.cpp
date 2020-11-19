@@ -124,3 +124,16 @@ int Deck::GetCardsValue() const{
     }
     return sum;
 }
+
+int Deck::GetFinalValue(const int *immunity) {
+    int sum = 0;
+    for(int i = 0; i < cardNumber; i++){
+        if(deck[i].color == GREEN){
+            sum += 2;
+        }else if(immunity[deck[i].color]!=1){
+            sum += 1;
+        }
+
+    }
+    return sum;
+}

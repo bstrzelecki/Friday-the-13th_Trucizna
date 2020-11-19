@@ -12,10 +12,10 @@ int* getCardValues(int count){
     return values;
 }
 Settings getSettings(){
-    int n,k,g,gv,o;
+    int n,k,g,gv,o,e;
     std::cin>>n>>k>>g>>gv>>o;
     return {
-            n,k,g,gv,o,g+k*o
+            n,k,g,gv,o,g+k*o,e,1
     };
 }
 
@@ -31,8 +31,7 @@ int main() {
     GameState gameState = StateParser::ReadFromStream();
 
 
-    gameState.Play(0);
-    gameState.DisplayState();
+    gameState.DisplayScore();
     /*
     VALIDATION_RESULT a = gameState.ValidateHands();
     VALIDATION_RESULT b = gameState.ValidatePiles();
