@@ -20,7 +20,7 @@
 #define BLACK 6
 
 
-inline const char* colors[] = {
+inline const char *colors[] = {
         "green",
         "blue",
         "red",
@@ -32,7 +32,7 @@ inline const char* colors[] = {
 typedef struct {
     int value;
     int color;
-}Card;
+} Card;
 
 typedef struct {
     int players;
@@ -43,6 +43,6 @@ typedef struct {
     int totalCards;
     int explosionThreshold;
     int activePlayer;
-}Settings;
+} Settings;
 
 #endif

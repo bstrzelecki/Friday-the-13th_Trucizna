@@ -2,20 +2,22 @@
 #include "statics.h"
 #include "GameState.h"
 #include "StateParser.h"
-int* getCardValues(int count){
-    int* values = new int[count];
+
+int *getCardValues(int count) {
+    int *values = new int[count];
     int input;
-    for(int i = 0; i < count; i++){
-        std::cin>>input;
+    for (int i = 0; i < count; i++) {
+        std::cin >> input;
         values[i] = input;
     }
     return values;
 }
-Settings getSettings(){
-    int n,k,g,gv,o,e;
-    std::cin>>n>>k>>g>>gv>>o;
+
+Settings getSettings() {
+    int n, k, g, gv, o, e;
+    std::cin >> n >> k >> g >> gv >> o;
     return {
-            n,k,g,gv,o,g+k*o,e,1
+            n, k, g, gv, o, g + k * o, e, 1
     };
 }
 
