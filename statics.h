@@ -1,24 +1,33 @@
 #ifndef definitions
 #define definitions
 
+#define DEBUG
+
 #define MAX_PLAYERS 6
 #define MAX_CARDS_ON_HAND 70
 #define MAX_PILES 6
 #define COLORS 7
-#define MAX_VALUE 30
 
+#define MAX_VALUE 30
 #define VALIDATION_ERROR 0
 #define VALIDATION_SUCCESS 1
-#define VALIDATION_RESULT int
 
+#define VALIDATION_RESULT int
 #define GREEN 0
 #define BLUE 1
 #define RED 2
 #define VIOLET 3
 #define YELLOW 4
 #define WHITE 5
+
 #define BLACK 6
 
+#ifdef DEBUG
+//REMOVE ME
+#define MEMTEST(x) if((x)==nullptr){std::cout<<"MEMORY ERROR";}
+#else
+#define MEMTEST(x) if((x)==nullptr){std::cout<<"MEMORY ERROR"; }
+#endif
 
 inline const char *colors[] = {
         "green",

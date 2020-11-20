@@ -11,13 +11,17 @@ public:
               Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card cardsOnPiles[MAX_PLAYERS][MAX_CARDS_ON_HAND],
               int *cardsPerPlayer, int *cardsOnHold, int *numberCardsOnPiles);
 
+    void Play(int card, int pileIfGreen = 0);
+
+    int IsGameOver();
+
     void DisplayState();
 
     void DisplayCardCount();
 
-    void Play(int card, int pileIfGreen = 0);
-
     void DisplayScore();
+
+    void DisplayValidationResult();
 
     VALIDATION_RESULT ValidateGreenCards();
 

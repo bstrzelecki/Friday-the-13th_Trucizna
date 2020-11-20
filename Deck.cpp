@@ -26,7 +26,7 @@ void Deck::DisplayDeck() const {
 Deck::Deck(Settings settings, int *values) {
     deckSize = settings.totalCards;
     cardNumber = deckSize;
-    deck = (Card *) malloc(deckSize * sizeof(Card));
+    MEMTEST(deck = (Card *) malloc(deckSize * sizeof(Card)))
     initializeGreenCards(settings.greenCards, settings.greenCardValue);
     sort(values, settings.cardCount);
     initializeCards(settings, values);
@@ -83,7 +83,7 @@ void Deck::AddCard(Card card) {
     } else {
         Card *oldDeck = deck;
         cardNumber++;
-        deck = (Card *) malloc(cardNumber * sizeof(Card));
+        MEMTEST(deck = (Card *) malloc(cardNumber * sizeof(Card)))
         for (int i = 0; i < cardNumber - 1; i++) {
             deck[i].color = oldDeck[i].color;
             deck[i].value = oldDeck[i].value;
