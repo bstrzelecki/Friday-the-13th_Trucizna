@@ -6,7 +6,7 @@
 
 class StateParser {
 public:
-    static GameState ReadFromStream();
+    static GameState* ReadFromStream();
 };
 
 

@@ -5,7 +5,7 @@
 
 class GameState {
 public:
-    GameState(Settings settings, Deck &deck);
+    GameState(Settings settings, Deck* deck);
 
     GameState(Settings settings, Card playerCards[MAX_PLAYERS][MAX_CARDS_ON_HAND],
               Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card cardsOnPiles[MAX_PLAYERS][MAX_CARDS_ON_HAND],
@@ -38,15 +38,19 @@ public:
 private:
     void handleExplosion(int player, int pile);
 
-    void dealCards(Deck &deck, int players);
+    void dealCards(Deck* deck, int players);
+
+    int checkGreenCardCount();
+
+    VALIDATION_RESULT checkGreenCardValue(Deck* deck, int* greenValue);
 
     int activePlayer;
     int piles;
     int playersNumber;
     int explosionThreshold;
-    Deck *playerHand;
-    Deck *playerDeck;
-    Deck *pileDeck;
+    Deck** playerHand;
+    Deck** playerDeck;
+    Deck** pileDeck;
 };
 
 

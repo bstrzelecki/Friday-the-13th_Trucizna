@@ -59,7 +59,7 @@ Deck::Deck(Card cards[], int length) {
     deckSize = length;
     cardNumber = length;
 
-    deck = (Card *) malloc(deckSize * sizeof(Card));
+    MEMTEST(deck = (Card *) malloc(deckSize * sizeof(Card)))
     for (int i = 0; i < deckSize; i++) {
         deck[i].color = cards[i].color;
         deck[i].value = cards[i].value;
@@ -138,4 +138,8 @@ int Deck::GetFinalValue(const int *immunity) {
 
     }
     return sum;
+}
+
+Deck::~Deck() {
+    free(deck);
 }

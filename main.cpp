@@ -30,31 +30,30 @@ int main(int argc, char** argv) {
             std::cout.rdbuf(file.rdbuf());
             Settings settings = getSettings();
             int* values = getCardValues(settings.cardCount);
-            Deck deck(settings, values);
+            GameState* gameState = new GameState(settings, new Deck(settings, values));
             delete [] values;
-            GameState gameState(settings, deck);
-            gameState.DisplayState();
+            gameState->DisplayState();
             file.close();
         }
         if(argv[1][0] == 'v'){
-            GameState gameState = StateParser::ReadFromStream();
+            GameState* gameState = StateParser::ReadFromStream();
             std::fstream file;
             file.open("validationResult.txt", std::ios::out);
             std::cout.rdbuf(file.rdbuf());
-            gameState.DisplayValidationResult();
+            gameState->DisplayValidationResult();
         }
     }else{
-        GameState gameState = StateParser::ReadFromStream();
-        gameState.Play(0);
+        GameState* gameState = StateParser::ReadFromStream();
+        gameState->Play(0);
         std::fstream file;
         file.open("gameState.txt", std::ios::out);
         std::cout.rdbuf(file.rdbuf());
-        gameState.DisplayState();
+        gameState->DisplayState();
         file.close();
-        if(gameState.IsGameOver() == 1){;
+        if(gameState->IsGameOver() == 1){;
             file.open("finalScore.txt", std::ios::out);
             std::cout.rdbuf(file.rdbuf());
-            gameState.DisplayScore();
+            gameState->DisplayScore();
             file.close();
         }
     }

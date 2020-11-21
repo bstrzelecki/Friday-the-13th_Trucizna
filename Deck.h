@@ -8,6 +8,8 @@ public:
 
     Deck(Card *cards, int length);
 
+    ~Deck();
+
     Card RemoveCard(int position);
 
     void AddCard(Card card);
