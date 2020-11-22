@@ -224,7 +224,7 @@ VALIDATION_RESULT GameState::ValidateCardValues() {
             }
         }
     }
-    printf("The values of cards of all colors are not identical:\n");
+    printf("The values of cards of all colors are identical:\n");
     for (int j = 0; j < MAX_VALUE; j++) {
         for (int k = 0; k < valueCount[BLUE][j]; k++) {
             printf("%i ", j);
@@ -285,6 +285,7 @@ void GameState::Play(int cardPosition, int pileIfGreen) {
         activePlayer = 0;
     if (card.color == GREEN) {
         pileDeck[pileIfGreen]->AddCard(card);
+        handleExplosion(currentPlayer, pileIfGreen);
     } else {
         for (int i = 0; i < piles; i++) {
             if (pileDeck[i]->GetColorCount(card.color) > 0) {
@@ -361,6 +362,8 @@ void GameState::DisplayValidationResult() {
        ValidatePiles() == VALIDATION_SUCCESS)
     {
         printf("The current state of the game is ok\n");
+    }else{
+        printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
     }
 }
 

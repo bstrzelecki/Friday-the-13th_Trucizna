@@ -1,5 +1,5 @@
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
-The values of cards of all colors are not identical:
+The values of cards of all colors are identical:
 1 1 1 2 2 2 4 4 5 5 5 7 7 7 
 The current state of the game is ok

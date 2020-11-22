@@ -1,4 +1,4 @@
-#include <iostream>
+#include <cstdio>
 #include "StateParser.h"
 
 #define COLOR_MAX_LENGTH 8
@@ -34,8 +34,9 @@ int loadLine(int i, Card deck[MAX_PLAYERS][MAX_CARDS_ON_HAND]) {
     while (true) {
         int value;
         char color[COLOR_MAX_LENGTH];
-        if (!(std::cin >> value))break;
-        if (!(std::cin >> color))break;
+        //FIXME
+        if (scanf("%i", &value)!=1)break;
+        if (scanf("%s", color)!=1)break;
 
         if (compare(color, "player") != 0) {
             break;
@@ -75,33 +76,32 @@ int getCrucibleCount(Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card card
     }
     return uniqueColors;
 }
-
 GameState* StateParser::ReadFromStream() {
     int playersNumber;
     int activePlayer;
     int explosionThreshold;
     char discard[32];
-    std::cin >> discard >> discard >> discard >> activePlayer;
-    std::cin >> discard >> discard >> discard >> playersNumber;
-    std::cin >> discard >> discard >> discard >> explosionThreshold;
+    scanf("%s %s %s %i", discard, discard, discard, &activePlayer);
+    scanf("%s %s %s %i", discard, discard, discard, &playersNumber);
+    scanf("%s %s %s %i", discard, discard, discard, &explosionThreshold);
     Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND];
     Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND];
     int cardsGiven[MAX_PLAYERS] = {};
     int cardsOnHold[MAX_PLAYERS] = {};
     for (int i = 0; i < playersNumber; i++) {
-        std::cin >> discard >> discard;
+        scanf("%s %s", discard, discard);
         if (i == 0) {
-            std::cin >> discard >> discard;
+            scanf("%s %s", discard, discard);
         }
         cardsGiven[i] = loadLine(i, cardsOnHand);
-        std::cin >> discard >> discard;
+        scanf("%s %s", discard, discard);
         cardsOnHold[i] = loadLine(i, cardsInDeck);
     }
     Card cardsOnPiles[MAX_PILES][MAX_CARDS_ON_HAND];
     int numberCardOnPiles[MAX_PILES];
     int piles = getCrucibleCount(cardsOnHand, cardsInDeck, playersNumber, cardsGiven, cardsOnHold);
     for (int i = 0; i < piles; i++) {
-        std::cin >> discard;
+        scanf("%s", discard);
         numberCardOnPiles[i] = loadLine(i, cardsOnPiles);
     }
     Settings settings{

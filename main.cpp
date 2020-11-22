@@ -1,4 +1,4 @@
-#include <iostream>
+#include <cstdio>
 #include "statics.h"
 #include "GameState.h"
 #include "StateParser.h"
@@ -8,7 +8,7 @@ int *getCardValues(int count) {
     int *values = new int[count];
     int input;
     for (int i = 0; i < count; i++) {
-        std::cin >> input;
+        scanf("%i", &input);
         values[i] = input;
     }
     return values;
@@ -16,13 +16,13 @@ int *getCardValues(int count) {
 
 Settings getSettings() {
     int n, k, g, gv, o, e;
-    std::cin >> n >> k >> g >> gv >> o>> e;
+    scanf("%i %i %i %i %i %i",&n, &k, &g, &gv, &o, &e);
     return {
             n, k, g, gv, o, g + k * o, e, 0
     };
 }
 void play(GameState* state){
-    
+
 }
 
 int main(int argc, char** argv) {

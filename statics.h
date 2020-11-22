@@ -3,6 +3,8 @@
 
 #define DEBUG
 
+
+
 #define MAX_PLAYERS 6
 #define MAX_CARDS_ON_HAND 70
 #define MAX_PILES 6
