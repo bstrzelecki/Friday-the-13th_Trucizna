@@ -42,7 +42,7 @@ private:
 
     int checkGreenCardCount();
 
-    VALIDATION_RESULT checkGreenCardValue(Deck* deck, int* greenValue);
+    static VALIDATION_RESULT checkGreenCardValue(Deck* deck, int* greenValue);
 
     int activePlayer;
     int piles;

@@ -1,6 +1,6 @@
 active player = 3
 players number = 4
-explosion threshold = 13
+explosion threshold =  13
 1 player hand cards: 
 1 player deck cards: 4 green 4 green 4 green 4 green 4 green 4 green 4 green 4 green 1 blue 7 blue 7 blue 5 red 5 red 5 red 7 violet 7 violet 
 2 player hand cards: 

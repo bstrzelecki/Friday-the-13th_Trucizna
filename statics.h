@@ -22,12 +22,7 @@
 
 #define BLACK 6
 
-#ifdef DEBUG
-//REMOVE ME
-#define MEMTEST(x) if((x)==nullptr){std::cout<<"MEMORY ERROR";}
-#else
-#define MEMTEST(x) if((x)==nullptr){std::cout<<"MEMORY ERROR"; }
-#endif
+#define MEMTEST(x) if((x)==nullptr){printf("MEMORY ERROR");}
 
 inline const char *colors[] = {
         "green",

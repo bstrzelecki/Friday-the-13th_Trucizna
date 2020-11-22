@@ -21,41 +21,38 @@ Settings getSettings() {
             n, k, g, gv, o, g + k * o, e, 0
     };
 }
+void play(GameState* state){
+    
+}
 
 int main(int argc, char** argv) {
+    GameState* gameState;
     if(argc == 2){
         if(argv[1][0] == 'g'){
-            std::fstream file;
-            file.open("gameState.txt", std::ios::out);
-            std::cout.rdbuf(file.rdbuf());
+            freopen("gameState.txt", "w", stdout);
             Settings settings = getSettings();
             int* values = getCardValues(settings.cardCount);
-            GameState* gameState = new GameState(settings, new Deck(settings, values));
+            gameState = new GameState(settings, new Deck(settings, values));
             delete [] values;
             gameState->DisplayState();
-            file.close();
         }
         if(argv[1][0] == 'v'){
-            GameState* gameState = StateParser::ReadFromStream();
-            std::fstream file;
-            file.open("validationResult.txt", std::ios::out);
-            std::cout.rdbuf(file.rdbuf());
+            gameState = StateParser::ReadFromStream();
+            freopen("validationResult.txt", "w", stdout);
             gameState->DisplayValidationResult();
         }
     }else{
-        GameState* gameState = StateParser::ReadFromStream();
+        gameState = StateParser::ReadFromStream();
         gameState->Play(0);
-        std::fstream file;
-        file.open("gameState.txt", std::ios::out);
-        std::cout.rdbuf(file.rdbuf());
+        freopen("gameState.txt", "w", stdout);
         gameState->DisplayState();
-        file.close();
+        fclose(stdout);
         if(gameState->IsGameOver() == 1){;
-            file.open("finalScore.txt", std::ios::out);
-            std::cout.rdbuf(file.rdbuf());
+            freopen("finalScore.txt", "w", stdout);
             gameState->DisplayScore();
-            file.close();
         }
     }
+    fclose(stdout);
+    delete gameState;
     return 0;
 }

@@ -1,4 +1,5 @@
-#include <iostream>
+#include <cstdio>
+#include <cstdlib>
 #include "Deck.h"
 
 void sort(int *array, int length) {
@@ -51,14 +52,13 @@ void Deck::initializeCards(Settings settings, int *values) const {
 }
 
 void Deck::displayCard(Card card) {
-    std::cout << card.value << " ";
-    std::cout << colors[card.color] << " ";
+    printf("%i %s ", card.value, colors[card.color]);
 }
 
 Deck::Deck(Card cards[], int length) {
     deckSize = length;
     cardNumber = length;
-
+    if(length == 0)return;
     MEMTEST(deck = (Card *) malloc(deckSize * sizeof(Card)))
     for (int i = 0; i < deckSize; i++) {
         deck[i].color = cards[i].color;
@@ -90,8 +90,10 @@ void Deck::AddCard(Card card) {
         }
         deck[cardNumber - 1].color = card.color;
         deck[cardNumber - 1].value = card.value;
+        if(deckSize != 0){
+            free(oldDeck);
+        }
         deckSize = cardNumber;
-        free(oldDeck);
     }
 }
 
@@ -141,5 +143,7 @@ int Deck::GetFinalValue(const int *immunity) {
 }
 
 Deck::~Deck() {
-    free(deck);
+    if(deckSize != 0) {
+        free(deck);
+    }
 }
