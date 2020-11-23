@@ -35,8 +35,8 @@ int loadLine(int i, Card deck[MAX_PLAYERS][MAX_CARDS_ON_HAND]) {
         int value;
         char color[COLOR_MAX_LENGTH];
         //FIXME
-        if (scanf("%i", &value)!=1)break;
-        if (scanf("%s", color)!=1)break;
+        if (scanf("%i", &value) != 1)break;
+        if (scanf("%s", color) != 1)break;
 
         if (compare(color, "player") != 0) {
             break;
@@ -76,7 +76,8 @@ int getCrucibleCount(Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card card
     }
     return uniqueColors;
 }
-GameState* StateParser::ReadFromStream() {
+
+GameState *StateParser::ReadFromStream() {
     int playersNumber;
     int activePlayer;
     int explosionThreshold;

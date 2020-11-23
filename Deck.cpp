@@ -58,7 +58,7 @@ void Deck::displayCard(Card card) {
 Deck::Deck(Card cards[], int length) {
     deckSize = length;
     cardNumber = length;
-    if(length == 0)return;
+    if (length == 0)return;
     MEMTEST(deck = (Card *) malloc(deckSize * sizeof(Card)))
     for (int i = 0; i < deckSize; i++) {
         deck[i].color = cards[i].color;
@@ -90,7 +90,7 @@ void Deck::AddCard(Card card) {
         }
         deck[cardNumber - 1].color = card.color;
         deck[cardNumber - 1].value = card.value;
-        if(deckSize != 0){
+        if (deckSize != 0) {
             free(oldDeck);
         }
         deckSize = cardNumber;
@@ -143,7 +143,7 @@ int Deck::GetFinalValue(const int *immunity) {
 }
 
 Deck::~Deck() {
-    if(deckSize != 0) {
+    if (deckSize != 0) {
         free(deck);
     }
 }

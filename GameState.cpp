@@ -2,19 +2,19 @@
 #include <cstdio>
 #include "GameState.h"
 
-GameState::GameState(Settings settings, Deck* deck) {
+GameState::GameState(Settings settings, Deck *deck) {
     activePlayer = 0;
     playersNumber = settings.players;
     piles = settings.crucibles;
     explosionThreshold = settings.explosionThreshold;
-    MEMTEST(playerHand = (Deck **) malloc(sizeof(void*) * playersNumber));
-    MEMTEST(playerDeck = (Deck **) malloc(sizeof(void*)* playersNumber));
-    MEMTEST(pileDeck = (Deck **) malloc(sizeof(void*) * piles));
+    MEMTEST(playerHand = (Deck **) malloc(sizeof(void *) * playersNumber));
+    MEMTEST(playerDeck = (Deck **) malloc(sizeof(void *) * playersNumber));
+    MEMTEST(pileDeck = (Deck **) malloc(sizeof(void *) * piles));
     dealCards(deck, playersNumber);
-    for(int i = 0; i < playersNumber; i++){
-        playerDeck[i] = new Deck(nullptr,0);
+    for (int i = 0; i < playersNumber; i++) {
+        playerDeck[i] = new Deck(nullptr, 0);
     }
-    for(int i = 0; i < piles; i++){
+    for (int i = 0; i < piles; i++) {
         pileDeck[i] = new Deck(nullptr, 0);
     }
 }
@@ -24,9 +24,9 @@ void GameState::DisplayState() {
     printf("players number = %i\n", playersNumber);
     printf("explosion threshold =  %i\n", explosionThreshold);
     for (int i = 0; i < playersNumber; i++) {
-        printf("%i player hand cards: ", i+1);
+        printf("%i player hand cards: ", i + 1);
         playerHand[i]->DisplayDeck();
-        printf("\n%i player deck cards: ", i+1);
+        printf("\n%i player deck cards: ", i + 1);
         playerDeck[i]->DisplayDeck();
         printf("\n");
     }
@@ -37,7 +37,7 @@ void GameState::DisplayState() {
     }
 }
 
-void GameState::dealCards(Deck* deck, int players) {
+void GameState::dealCards(Deck *deck, int players) {
     Card cards[MAX_PLAYERS][MAX_CARDS_ON_HAND];
     int cardsGiven[MAX_PLAYERS] = {};
     int dealingTo = 0;
@@ -71,13 +71,13 @@ GameState::GameState(Settings settings, Card playerCards[MAX_PLAYERS][MAX_CARDS_
     activePlayer = settings.activePlayer - 1;
     explosionThreshold = settings.explosionThreshold;
     piles = settings.crucibles;
-    MEMTEST(playerDeck = (Deck **) std::malloc(sizeof(void*) * playersNumber))
-    MEMTEST(playerHand = (Deck **) std::malloc(sizeof(void*) * playersNumber))
+    MEMTEST(playerDeck = (Deck **) std::malloc(sizeof(void *) * playersNumber))
+    MEMTEST(playerHand = (Deck **) std::malloc(sizeof(void *) * playersNumber))
     for (int i = 0; i < settings.players; i++) {
         playerHand[i] = new Deck(playerCards[i], cardsPerPlayer[i]);
         playerDeck[i] = new Deck(cardsInDeck[i], cardsOnHold[i]);
     }
-    pileDeck = (Deck **) std::malloc(sizeof(void*) * piles);
+    pileDeck = (Deck **) std::malloc(sizeof(void *) * piles);
     for (int i = 0; i < piles; i++) {
         pileDeck[i] = new Deck(cardsOnPiles[i], numberCardsOnPiles[i]);
     }
@@ -85,11 +85,11 @@ GameState::GameState(Settings settings, Card playerCards[MAX_PLAYERS][MAX_CARDS_
 
 void GameState::DisplayCardCount() {
     for (int i = 0; i < playersNumber; i++) {
-        printf("%i player has %i cards on hand\n", i + 1, playerHand[i]->cardNumber );
-        printf("%i player has %i cards in front of him\n", i + 1, playerDeck[i]->cardNumber );
+        printf("%i player has %i cards on hand\n", i + 1, playerHand[i]->cardNumber);
+        printf("%i player has %i cards in front of him\n", i + 1, playerDeck[i]->cardNumber);
     }
     for (int i = 0; i < piles; i++) {
-        printf("there are %i cards on %i pile\n", pileDeck[i]->cardNumber , i + 1);
+        printf("there are %i cards on %i pile\n", pileDeck[i]->cardNumber, i + 1);
     }
 }
 
@@ -109,7 +109,7 @@ int GameState::checkGreenCardCount() {
     return greenCount;
 }
 
-VALIDATION_RESULT GameState::checkGreenCardValue(Deck* deck, int* greenValue) {
+VALIDATION_RESULT GameState::checkGreenCardValue(Deck *deck, int *greenValue) {
     int tempVal = deck->GetGreenCardsValue();
     if (tempVal == -2) {
         printf("Different green cards values occurred\n");
@@ -129,25 +129,26 @@ VALIDATION_RESULT GameState::ValidateGreenCards() {
     int greenValue = -1;
     int greenCount = 0;
     greenCount = checkGreenCardCount();
-    if(greenCount == 0)
+    if (greenCount == 0)
         return VALIDATION_ERROR;
     for (int i = 0; i < playersNumber; i++) {
         VALIDATION_RESULT result = checkGreenCardValue(playerHand[i], &greenValue);
-        if(result == VALIDATION_ERROR)
+        if (result == VALIDATION_ERROR)
             return VALIDATION_ERROR;
         result = checkGreenCardValue(playerDeck[i], &greenValue);
-        if(result == VALIDATION_ERROR)
+        if (result == VALIDATION_ERROR)
             return VALIDATION_ERROR;
     }
     for (int i = 0; i < piles; i++) {
         VALIDATION_RESULT result = checkGreenCardValue(pileDeck[i], &greenValue);
-        if(result == VALIDATION_ERROR)
+        if (result == VALIDATION_ERROR)
             return VALIDATION_ERROR;
     }
     printf("Found %i green cards, all with %i value\n", greenCount, greenValue);
     return VALIDATION_SUCCESS;
 
 }
+
 VALIDATION_RESULT GameState::ValidateCards() {
     int count[COLORS] = {};
     for (int i = 0; i < playersNumber; i++) {
@@ -253,7 +254,7 @@ VALIDATION_RESULT GameState::ValidatePiles() {
     }
     for (int i = 0; i < piles; i++) {
         if (pileDeck[i]->GetCardsValue() > explosionThreshold) {
-            printf("Pile number %i should explode earlier\n", i+ 1);
+            printf("Pile number %i should explode earlier\n", i + 1);
             valid = VALIDATION_ERROR;
         }
     }
@@ -346,7 +347,7 @@ void GameState::DisplayScore() {
     for (int i = 1; i < COLORS; i++) {
         if (max[i] != -1) {
             immunity[max[i]][i] = 1;
-            printf("Na kolor %s odporny jest gracz %i\n", colors[i], max[i]+1);
+            printf("Na kolor %s odporny jest gracz %i\n", colors[i], max[i] + 1);
         }
     }
     for (int i = 0; i < playersNumber; i++) {
@@ -355,22 +356,21 @@ void GameState::DisplayScore() {
 }
 
 void GameState::DisplayValidationResult() {
-    if(ValidateGreenCards() == VALIDATION_SUCCESS &&
-       ValidateCards() == VALIDATION_SUCCESS &&
-       ValidateCardValues() == VALIDATION_SUCCESS &&
-       ValidateHands() == VALIDATION_SUCCESS &&
-       ValidatePiles() == VALIDATION_SUCCESS)
-    {
+    if (ValidateGreenCards() == VALIDATION_SUCCESS &&
+        ValidateCards() == VALIDATION_SUCCESS &&
+        ValidateCardValues() == VALIDATION_SUCCESS &&
+        ValidateHands() == VALIDATION_SUCCESS &&
+        ValidatePiles() == VALIDATION_SUCCESS) {
         printf("The current state of the game is ok\n");
-    }else{
+    } else {
         printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
     }
 }
 
 int GameState::IsGameOver() {
-    if(playerHand[activePlayer]->cardNumber == 0){
+    if (playerHand[activePlayer]->cardNumber == 0) {
         return 1;
-    }else{
+    } else {
         return 0;
     }
 
