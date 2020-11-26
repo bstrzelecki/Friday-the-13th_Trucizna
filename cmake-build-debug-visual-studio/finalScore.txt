@@ -1,7 +1,0 @@
-Na kolor blue odporny jest gracz 4
-Na kolor red odporny jest gracz 2
-Na kolor violet odporny jest gracz 4
-Wynik gracza 1 = 7
-Wynik gracza 2 = 0
-Wynik gracza 3 = 8
-Wynik gracza 4 = 16

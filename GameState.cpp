@@ -376,3 +376,7 @@ int GameState::IsGameOver() {
 
 }
 
+Deck *GameState::GetActiveHand() {
+    return playerHand[activePlayer];
+}
+

@@ -2,7 +2,8 @@
 #include "statics.h"
 #include "GameState.h"
 #include "StateParser.h"
-#include <fstream>
+
+GameState *getState(GameState *gameState);
 
 int *getCardValues(int count) {
     int *values = new int[count];
@@ -21,37 +22,49 @@ Settings getSettings() {
             n, k, g, gv, o, g + k * o, e, 0
     };
 }
-
-void play(GameState *state) {
+void dumb(GameState* gameState){
+    gameState->Play(0);
+}
+void lowestCard(GameState* gameState){
 
 }
+void play(GameState* gameState) {
+    dumb(gameState);
+    freopen("gameState.txt", "w", stdout);
+    gameState->DisplayState();
+    fclose(stdout);
+    if (gameState->IsGameOver() == 1) {
+        freopen("finalScore.txt", "w", stdout);
+        gameState->DisplayScore();
+    }
+}
 
+GameState* generateState() {
+    freopen("gameState.txt", "w", stdout);
+    Settings settings = getSettings();
+    int *values = getCardValues(settings.cardCount);
+    auto* gameState = new GameState(settings, new Deck(settings, values));
+    delete[] values;
+    gameState->DisplayState();
+    return gameState;
+}
+void validateState(GameState* gameState){
+    freopen("validationResult.txt", "w", stdout);
+    gameState->DisplayValidationResult();
+}
 int main(int argc, char **argv) {
     GameState *gameState;
     if (argc == 2) {
         if (argv[1][0] == 'g') {
-            freopen("gameState.txt", "w", stdout);
-            Settings settings = getSettings();
-            int *values = getCardValues(settings.cardCount);
-            gameState = new GameState(settings, new Deck(settings, values));
-            delete[] values;
-            gameState->DisplayState();
+            gameState = generateState();
         }
         if (argv[1][0] == 'v') {
             gameState = StateParser::ReadFromStream();
-            freopen("validationResult.txt", "w", stdout);
-            gameState->DisplayValidationResult();
+            validateState(gameState);
         }
     } else {
         gameState = StateParser::ReadFromStream();
-        gameState->Play(0);
-        freopen("gameState.txt", "w", stdout);
-        gameState->DisplayState();
-        fclose(stdout);
-        if (gameState->IsGameOver() == 1) { ;
-            freopen("finalScore.txt", "w", stdout);
-            gameState->DisplayScore();
-        }
+        play(gameState);
     }
     fclose(stdout);
     delete gameState;

@@ -23,6 +23,8 @@ public:
 
     void DisplayValidationResult();
 
+    Deck* GetActiveHand();
+
     VALIDATION_RESULT ValidateGreenCards();
 
     VALIDATION_RESULT ValidateCards();

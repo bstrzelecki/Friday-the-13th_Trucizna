@@ -19,7 +19,7 @@ GameState.h
 C:/Users/mabat/CLionProjects/POP202_1/GameState.h
 
 C:/Users/mabat/CLionProjects/POP202_1/main.cpp
-iostream
+cstdio
 -
 statics.h
 C:/Users/mabat/CLionProjects/POP202_1/statics.h
