@@ -12,6 +12,8 @@ public:
 
     Card RemoveCard(int position);
 
+    Card PeekCard(int position);
+
     void AddCard(Card card);
 
     int GetColorCount(int colorId) const;
@@ -19,6 +21,8 @@ public:
     int GetGreenCardsValue() const;
 
     int GetCardsValue() const;
+
+    int GetCardsCount() const;
 
     int GetFinalValue(const int immunity[]);
 

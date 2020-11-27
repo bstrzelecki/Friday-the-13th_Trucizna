@@ -147,3 +147,11 @@ Deck::~Deck() {
         free(deck);
     }
 }
+
+Card Deck::PeekCard(int position) {
+    return deck[position];
+}
+
+int Deck::GetCardsCount() const {
+    return cardNumber;
+}

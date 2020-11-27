@@ -127,8 +127,7 @@ VALIDATION_RESULT GameState::checkGreenCardValue(Deck *deck, int *greenValue) {
 
 VALIDATION_RESULT GameState::ValidateGreenCards() {
     int greenValue = -1;
-    int greenCount = 0;
-    greenCount = checkGreenCardCount();
+    int greenCount = checkGreenCardCount();
     if (greenCount == 0)
         return VALIDATION_ERROR;
     for (int i = 0; i < playersNumber; i++) {
@@ -278,20 +277,34 @@ VALIDATION_RESULT GameState::ValidateHands() {
     return VALIDATION_SUCCESS;
 }
 
-void GameState::Play(int cardPosition, int pileIfGreen) {
+void GameState::Play(int cardPosition, int defaultPile) {
     int currentPlayer = activePlayer;
     Card card = playerHand[activePlayer]->RemoveCard(cardPosition);
     activePlayer++;
     if (activePlayer > playersNumber - 1)
         activePlayer = 0;
     if (card.color == GREEN) {
-        pileDeck[pileIfGreen]->AddCard(card);
-        handleExplosion(currentPlayer, pileIfGreen);
+        pileDeck[defaultPile]->AddCard(card);
+        handleExplosion(currentPlayer, defaultPile);
     } else {
         for (int i = 0; i < piles; i++) {
             if (pileDeck[i]->GetColorCount(card.color) > 0) {
                 pileDeck[i]->AddCard(card);
                 handleExplosion(currentPlayer, i);
+                return;
+            }
+        }
+        {
+            int isEmpty = 1;
+            for (int i = 1; i < COLORS; i++) {
+                if (pileDeck[defaultPile]->GetColorCount(i) != 0) {
+                    isEmpty = 0;
+                    break;
+                }
+            }
+            if (isEmpty == 1) {
+                pileDeck[defaultPile]->AddCard(card);
+                handleExplosion(currentPlayer, defaultPile);
                 return;
             }
         }
@@ -378,5 +391,37 @@ int GameState::IsGameOver() {
 
 Deck *GameState::GetActiveHand() {
     return playerHand[activePlayer];
+}
+
+Deck *GameState::GetPile(int n) {
+    if(n < piles){
+        return pileDeck[n];
+    }else{
+        return nullptr;
+    }
+}
+
+int GameState::GetPileCount() const {
+    return piles;
+}
+
+Deck *GameState::GetPileWithColor(int color) {
+    for(int i = 0; i < piles; i++){
+        if(pileDeck[i]->GetColorCount(color) > 0)
+            return pileDeck[i];
+    }
+    return nullptr;
+}
+
+int GameState::GetPileIdWithColor(int color) {
+    for(int i = 0; i < piles; i++){
+        if(pileDeck[i]->GetColorCount(color) > 0)
+            return i;
+    }
+    return -1;
+}
+
+int GameState::GetExplosionThreshold() {
+    return explosionThreshold;
 }
 

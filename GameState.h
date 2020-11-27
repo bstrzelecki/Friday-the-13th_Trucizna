@@ -11,7 +11,7 @@ public:
               Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card cardsOnPiles[MAX_PLAYERS][MAX_CARDS_ON_HAND],
               int *cardsPerPlayer, int *cardsOnHold, int *numberCardsOnPiles);
 
-    void Play(int card, int pileIfGreen = 0);
+    void Play(int card, int defaultPile = 0);
 
     int IsGameOver();
 
@@ -24,6 +24,16 @@ public:
     void DisplayValidationResult();
 
     Deck* GetActiveHand();
+
+    Deck* GetPile(int n);
+
+    Deck* GetPileWithColor(int color);
+
+    int GetPileIdWithColor(int color);
+
+    int GetPileCount() const;
+
+    int GetExplosionThreshold();
 
     VALIDATION_RESULT ValidateGreenCards();
 
