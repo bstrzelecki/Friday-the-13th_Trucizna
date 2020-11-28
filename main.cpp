@@ -25,6 +25,53 @@ Settings getSettings() {
 void dumb(GameState* gameState){
     gameState->Play(0);
 }
+
+void highestCardCount(GameState* gameState){
+    Deck* deck = gameState->GetActivePlayerDeck();
+    Deck* hand = gameState->GetActiveHand();
+
+    int maxCards = 0;
+    int maxCardsIndex = -1;
+    int cardIndex = -1;
+
+    for(int i = 0; i < gameState->GetPileCount();i++){
+        if(gameState->GetPile(i)->GetContainedColor() <= 0)continue;
+        int count = gameState->GetPile(i)->GetNonGreenCardCount() + deck->GetColorCount(gameState->GetPile(i)->GetContainedColor());
+        if(count > maxCards){
+            int explosionCost = gameState->GetExplosionThreshold() - gameState->GetPile(i)->GetCardsValue();
+            int explosionColor = gameState->GetPile(i)->GetContainedColor();
+            for(int j = 0; j < hand->GetCardsCount(); j++){
+                if((hand->PeekCard(j).color == GREEN || hand->PeekCard(j).color == explosionColor) && hand->PeekCard(j).value >= explosionCost){
+                    maxCards = count;
+                    maxCardsIndex = i;
+                    cardIndex = j;
+                }
+            }
+        }
+    }
+    gameState->Play(cardIndex, maxCardsIndex);
+}
+
+void avoidExplosion(GameState* gameState){
+    Deck* hand = gameState->GetActiveHand();
+    for(int i = 0; i < hand->GetCardsCount();i++){
+        for(int j = 0 ; j < gameState->GetPileCount(); j++){
+            Card card = hand->PeekCard(i);
+            if(card.value + gameState->GetPile(j)->GetCardsValue() < gameState->GetExplosionThreshold()){
+                if(card.color == GREEN){
+                    gameState->Play(i,j);
+                    return;
+                }
+                if(card.color == gameState->GetPile(j)->GetContainedColor()){
+                    gameState->Play(i,j);
+                    return;
+                }
+            }
+        }
+    }
+    highestCardCount(gameState);
+}
+
 void highestCard(GameState* gameState){
     Deck* deck = gameState->GetActiveHand();
     int maxIndex = -1;
@@ -90,7 +137,6 @@ void optimalCard(GameState* gameState){
             int minValue = MAX_VALUE * MAX_CARDS_ON_HAND;
             Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
             if(pile != nullptr){
-                minValue = pile->GetCardsValue();
                 minPile = gameState->GetPileIdWithColor(deck->PeekCard(i).color);
             }else{
                 for(int j = 0; j < gameState->GetPileCount();j++){

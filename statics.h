@@ -11,6 +11,7 @@
 #define VALIDATION_SUCCESS 1
 
 #define VALIDATION_RESULT int
+#define COLOR int
 #define GREEN 0
 #define BLUE 1
 #define RED 2

@@ -25,6 +25,8 @@ public:
 
     Deck* GetActiveHand();
 
+    Deck* GetActivePlayerDeck();
+
     Deck* GetPile(int n);
 
     Deck* GetPileWithColor(int color);
@@ -32,6 +34,7 @@ public:
     int GetPileIdWithColor(int color);
 
     int GetPileCount() const;
+
 
     int GetExplosionThreshold();
 

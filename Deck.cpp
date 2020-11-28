@@ -155,3 +155,25 @@ Card Deck::PeekCard(int position) {
 int Deck::GetCardsCount() const {
     return cardNumber;
 }
+
+int Deck::GetNonGreenCardCount() {
+    int count = 0;
+    for(int i = 0; i < cardNumber;i++){
+        if(deck[i].color != GREEN){
+            count++;
+        }
+    }
+    return count;
+}
+
+COLOR Deck::GetContainedColor() {
+    int containsGreen = -1;
+    for(int i = 0; i < cardNumber; i++){
+        if(deck[i].color != GREEN){
+            return deck[i].color;
+        }else{
+            containsGreen = 0;
+        }
+    }
+    return containsGreen;
+}

@@ -425,3 +425,7 @@ int GameState::GetExplosionThreshold() {
     return explosionThreshold;
 }
 
+Deck *GameState::GetActivePlayerDeck() {
+    return playerDeck[activePlayer];
+}
+

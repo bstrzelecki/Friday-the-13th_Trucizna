@@ -24,6 +24,10 @@ public:
 
     int GetCardsCount() const;
 
+    int GetNonGreenCardCount();
+
+    COLOR GetContainedColor();
+
     int GetFinalValue(const int immunity[]);
 
     int cardNumber;
