@@ -1,46 +1,20 @@
-active player = 8
-players number = 20
+active player = 2
+players number = 7
 explosion threshold =  13
-1 player hand cards: 4 green 2 blue 2 blue 5 blue 4 red 5 red 1 violet 5 violet 7 violet 
+1 player hand cards: 4 green 4 green 4 green 1 blue 2 blue 4 blue 5 blue 7 blue 4 blue 1 blue 4 blue 1 red 2 red 4 red 5 red 7 red 4 red 1 red 4 red 1 violet 2 violet 4 violet 5 violet 7 violet 4 violet 1 violet 4 violet 
 1 player deck cards: 
-2 player hand cards: 4 green 4 blue 2 blue 7 blue 5 red 5 red 1 violet 5 violet 7 violet 
+2 player hand cards: 4 green 4 green 4 green 4 green 1 blue 2 blue 4 blue 5 blue 1 blue 5 blue 1 blue 5 blue 1 red 2 red 4 red 5 red 1 red 5 red 1 red 5 red 1 violet 2 violet 4 violet 5 violet 1 violet 5 violet 1 violet 5 violet 
 2 player deck cards: 
-3 player hand cards: 4 green 4 blue 4 blue 7 blue 5 red 5 red 1 violet 5 violet 1 violet 
+3 player hand cards: 4 green 4 green 4 green 4 green 1 blue 2 blue 4 blue 7 blue 1 blue 5 blue 1 blue 5 blue 1 red 2 red 4 red 7 red 1 red 5 red 1 red 5 red 1 violet 2 violet 4 violet 7 violet 1 violet 5 violet 1 violet 5 violet 
 3 player deck cards: 
-4 player hand cards: 4 green 4 blue 4 blue 7 blue 5 red 7 red 1 violet 7 violet 1 violet 
-4 player deck cards: 4 green 4 green 4 green 4 green 
-5 player hand cards: 4 green 4 blue 5 blue 1 red 5 red 7 red 1 violet 7 violet 1 violet 
+4 player hand cards: 4 green 4 green 4 green 4 green 1 blue 2 blue 5 blue 7 blue 2 blue 5 blue 2 blue 5 blue 1 red 2 red 5 red 7 red 2 red 5 red 2 red 5 red 1 violet 2 violet 5 violet 7 violet 2 violet 5 violet 2 violet 5 violet 
+4 player deck cards: 
+5 player hand cards: 4 green 4 green 4 green 4 green 1 blue 2 blue 5 blue 7 blue 2 blue 7 blue 2 blue 7 blue 1 red 2 red 5 red 7 red 2 red 7 red 2 red 7 red 1 violet 2 violet 5 violet 7 violet 2 violet 7 violet 2 violet 7 violet 
 5 player deck cards: 
-6 player hand cards: 4 green 4 green 5 blue 5 blue 5 red 7 red 1 violet 7 violet 2 violet 
+6 player hand cards: 4 green 4 green 4 green 4 green 1 blue 2 blue 5 blue 7 blue 2 blue 7 blue 2 blue 7 blue 1 red 2 red 5 red 7 red 2 red 7 red 2 red 7 red 1 violet 2 violet 5 violet 7 violet 2 violet 7 violet 2 violet 7 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 green 5 blue 5 blue 1 red 5 red 1 red 7 violet 2 violet 
+7 player hand cards: 4 green 4 green 4 green 4 green 1 blue 4 blue 5 blue 7 blue 4 blue 7 blue 4 blue 7 blue 1 red 4 red 5 red 7 red 4 red 7 red 4 red 7 red 1 violet 4 violet 5 violet 7 violet 4 violet 7 violet 4 violet 7 violet 
 7 player deck cards: 
-8 player hand cards: 4 green 4 green 5 blue 7 blue 1 red 7 red 1 red 2 violet 7 violet 2 violet 
-8 player deck cards: 
-9 player hand cards: 4 green 1 blue 5 blue 7 blue 1 red 7 red 1 red 2 violet 7 violet 4 violet 
-9 player deck cards: 
-10 player hand cards: 4 green 1 blue 5 blue 7 blue 1 red 7 red 2 red 2 violet 1 violet 4 violet 
-10 player deck cards: 
-11 player hand cards: 4 green 1 blue 5 blue 1 blue 1 red 7 red 2 red 2 violet 1 violet 5 violet 
-11 player deck cards: 
-12 player hand cards: 4 green 1 blue 7 blue 1 blue 2 red 7 red 2 red 2 violet 2 violet 5 violet 
-12 player deck cards: 
-13 player hand cards: 4 green 1 blue 7 blue 1 blue 2 red 7 red 4 red 2 violet 2 violet 5 violet 
-13 player deck cards: 
-14 player hand cards: 4 green 1 blue 7 blue 2 blue 2 red 1 red 4 red 4 violet 2 violet 7 violet 
-14 player deck cards: 
-15 player hand cards: 4 green 1 blue 7 blue 2 blue 2 red 1 red 5 red 4 violet 4 violet 7 violet 
-15 player deck cards: 
-16 player hand cards: 4 green 2 blue 7 blue 2 blue 2 red 2 red 5 red 4 violet 4 violet 7 violet 
-16 player deck cards: 
-17 player hand cards: 4 green 2 blue 7 blue 4 blue 2 red 2 red 5 red 4 violet 5 violet 
-17 player deck cards: 
-18 player hand cards: 4 green 2 blue 1 blue 4 blue 4 red 2 red 7 red 5 violet 5 violet 
-18 player deck cards: 
-19 player hand cards: 4 green 2 blue 1 blue 5 blue 4 red 4 red 7 red 5 violet 5 violet 
-19 player deck cards: 
-20 player hand cards: 4 green 2 blue 2 blue 5 blue 4 red 4 red 7 red 5 violet 7 violet 
-20 player deck cards: 
 1 pile cards: 4 green 
-2 pile cards: 1 red 
-3 pile cards: 1 violet 
+2 pile cards: 
+3 pile cards: 

@@ -35,6 +35,7 @@ public:
 
     int GetPileCount() const;
 
+    int GetActivePlayer() const;
 
     int GetExplosionThreshold();
 

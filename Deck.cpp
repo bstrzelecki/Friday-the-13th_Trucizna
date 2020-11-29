@@ -52,6 +52,10 @@ void Deck::initializeCards(Settings settings, int *values) const {
 }
 
 void Deck::displayCard(Card card) {
+    if(card.value<0||card.color<0){
+        printf("ISSUE");
+        return;
+    }
     printf("%i %s ", card.value, colors[card.color]);
 }
 
@@ -134,7 +138,7 @@ int Deck::GetFinalValue(const int *immunity) {
     for (int i = 0; i < cardNumber; i++) {
         if (deck[i].color == GREEN) {
             sum += 2;
-        } else if (immunity[deck[i].color] != 1) {
+        } else if (deck[i].color > 0 && immunity[deck[i].color] != 1) {
             sum += 1;
         }
 

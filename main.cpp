@@ -121,7 +121,6 @@ void highestCard(GameState* gameState){
             }
         }
     }
-
     gameState->Play(maxIndex, minPile);
 }
 
@@ -129,11 +128,11 @@ void optimalCard(GameState* gameState){
     Deck* deck = gameState->GetActiveHand();
     int max = 0;
     int maxIndex = -1;
+    int minPile = -1;
     for(int i =0; i < deck->cardNumber; i++){
         int value = deck->PeekCard(i).value;
         if(value >= max){
             max = value;
-            int minPile = -1;
             int minValue = MAX_VALUE * MAX_CARDS_ON_HAND;
             Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
             if(pile != nullptr){
@@ -150,12 +149,14 @@ void optimalCard(GameState* gameState){
             if(gameState->GetPile(minPile)->GetCardsValue() + deck->PeekCard(i).value > gameState->GetExplosionThreshold()){
                 continue;
             }else{
-                gameState->Play(maxIndex,minPile);
-                return;
+                maxIndex = i;
             }
         }
     }
-    highestCard(gameState);
+    if(maxIndex == -1 || minPile == -1)
+        highestCard(gameState);
+    else
+        gameState->Play(maxIndex, minPile);
 }
 
 void lowestCard(GameState* gameState){
@@ -214,18 +215,22 @@ void lowestCard(GameState* gameState){
     gameState->Play(minIndex,minPile);
 }
 void play(GameState* gameState) {
-    lowestCard(gameState);
-    freopen("gameState.txt", "w", stdout);
-    gameState->DisplayState();
-    fclose(stdout);
-    if (gameState->IsGameOver() == 1) {
-        freopen("finalScore.txt", "w", stdout);
-        gameState->DisplayScore();
-    }
+
+
+    void (*playerAction[])(GameState*) = {
+        avoidExplosion,
+        optimalCard,
+        lowestCard,
+        dumb,
+        lowestCard,
+        lowestCard,
+        lowestCard,
+        avoidExplosion
+    };
+    playerAction[gameState->GetActivePlayer()](gameState);
 }
 
 GameState* generateState() {
-    freopen("gameState.txt", "w", stdout);
     Settings settings = getSettings();
     int *values = getCardValues(settings.cardCount);
     auto* gameState = new GameState(settings, new Deck(settings, values));
@@ -234,22 +239,39 @@ GameState* generateState() {
     return gameState;
 }
 void validateState(GameState* gameState){
-    freopen("validationResult.txt", "w", stdout);
     gameState->DisplayValidationResult();
 }
 int main(int argc, char **argv) {
     GameState *gameState;
     if (argc == 2) {
         if (argv[1][0] == 'g') {
+            freopen("gameState.txt", "w", stdout);
             gameState = generateState();
         }
         if (argv[1][0] == 'v') {
             gameState = StateParser::ReadFromStream();
+            freopen("validationResult.txt", "w", stdout);
             validateState(gameState);
         }
-    } else {
+        if(argv[1][0] == 'a'){
+            freopen("gameLog.txt", "a", stdout);
+            gameState = generateState();
+            while(gameState->IsGameOver() == 0){
+                gameState->DisplayValidationResult();
+                play(gameState);
+                gameState->DisplayState();
+            }
+            gameState->DisplayScore();
+        }
+    }else {
         gameState = StateParser::ReadFromStream();
+        freopen("gameState.txt", "w", stdout);
         play(gameState);
+        gameState->DisplayState();
+        if(gameState->IsGameOver() == 1){
+            freopen("finalScore.txt", "w", stdout);
+            gameState->DisplayScore();
+        }
     }
     fclose(stdout);
     delete gameState;

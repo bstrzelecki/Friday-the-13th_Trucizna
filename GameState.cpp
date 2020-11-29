@@ -279,6 +279,11 @@ VALIDATION_RESULT GameState::ValidateHands() {
 
 void GameState::Play(int cardPosition, int defaultPile) {
     int currentPlayer = activePlayer;
+    if(cardPosition == -1 || defaultPile == -1){
+        printf("ISSUE");
+        cardPosition = 0;
+        defaultPile = 0;
+    }
     Card card = playerHand[activePlayer]->RemoveCard(cardPosition);
     activePlayer++;
     if (activePlayer > playersNumber - 1)
@@ -427,5 +432,9 @@ int GameState::GetExplosionThreshold() {
 
 Deck *GameState::GetActivePlayerDeck() {
     return playerDeck[activePlayer];
+}
+
+int GameState::GetActivePlayer() const {
+    return activePlayer;
 }
 
