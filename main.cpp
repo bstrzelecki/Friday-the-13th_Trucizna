@@ -16,10 +16,10 @@ int *getCardValues(int count) {
 }
 
 Settings getSettings() {
-    int n, k, g, gv, o, e;
-    scanf("%i %i %i %i %i %i", &n, &k, &g, &gv, &o, &e);
+    int n, k, g, gv, o, e, r;
+    scanf("%i %i %i %i %i %i %i", &n, &k, &g, &gv, &o, &e, &r);
     return {
-            n, k, g, gv, o, g + k * o, e, 0
+            n, k, g, gv, o, g + k * o, e, 0, r
     };
 }
 void dumb(GameState* gameState){
@@ -75,7 +75,7 @@ void avoidExplosion(GameState* gameState){
 void highestCard(GameState* gameState){
     Deck* deck = gameState->GetActiveHand();
     int maxIndex = -1;
-    int max = MAX_VALUE;
+    int max = 0;
     int minPile = -1;
     int maxCount = MAX_VALUE * MAX_CARDS_ON_HAND;
     for(int i = 0; i < deck->cardNumber;i++){
@@ -208,7 +208,7 @@ void lowestCard(GameState* gameState){
             }
         }
     }
-    if(gameState->GetPile(minPile)->GetCardsValue() + gameState->GetActiveHand()->PeekCard(minIndex).value > gameState->GetExplosionThreshold()){
+    if((minIndex == -1 || minPile == -1) || gameState->GetPile(minPile)->GetCardsValue() + gameState->GetActiveHand()->PeekCard(minIndex).value > gameState->GetExplosionThreshold()){
         highestCard(gameState);
         return;
     }
@@ -225,13 +225,12 @@ void play(GameState* gameState) {
         lowestCard,
         lowestCard,
         lowestCard,
-        avoidExplosion
+        dumb
     };
     playerAction[gameState->GetActivePlayer()](gameState);
 }
 
-GameState* generateState() {
-    Settings settings = getSettings();
+GameState* generateState(Settings settings) {
     int *values = getCardValues(settings.cardCount);
     auto* gameState = new GameState(settings, new Deck(settings, values));
     delete[] values;
@@ -246,7 +245,7 @@ int main(int argc, char **argv) {
     if (argc == 2) {
         if (argv[1][0] == 'g') {
             freopen("gameState.txt", "w", stdout);
-            gameState = generateState();
+            gameState = generateState(getSettings());
         }
         if (argv[1][0] == 'v') {
             gameState = StateParser::ReadFromStream();
@@ -254,8 +253,9 @@ int main(int argc, char **argv) {
             validateState(gameState);
         }
         if(argv[1][0] == 'a'){
+            Settings settings = getSettings();
             freopen("gameLog.txt", "a", stdout);
-            gameState = generateState();
+            gameState = generateState(settings);
             while(gameState->IsGameOver() == 0){
                 gameState->DisplayValidationResult();
                 play(gameState);

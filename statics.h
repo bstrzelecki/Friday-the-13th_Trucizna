@@ -46,6 +46,7 @@ typedef struct {
     int totalCards;
     int explosionThreshold;
     int activePlayer;
+    int rounds;
 } Settings;
 
 #endif

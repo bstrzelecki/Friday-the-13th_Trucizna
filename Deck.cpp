@@ -1,20 +1,32 @@
 #include <cstdio>
 #include <cstdlib>
 #include "Deck.h"
+#include <time.h>
 
 void sort(int *array, int length) {
-    auto swap = [](int *a, int *b) {
+    auto swap =[](int* a, int* b){
         int t = *a;
         *a = *b;
         *b = t;
     };
-
     for (int i = 0; i < length - 1; i++) {
         for (int j = 0; j < length - i - j; j++) {
             if (array[j] > array[j + 1]) {
                 swap(&(array[j]), &(array[j + 1]));
             }
         }
+    }
+}
+void shuffle(Card* array, int length){
+    auto swap =[](Card* a, Card* b){
+        Card t = *a;
+        *a = *b;
+        *b = t;
+    };
+    srand(time(nullptr));
+    for(int i = 0; i < length; i++){
+        int pos = rand()%length;
+        swap(&array[i], &array[pos]);
     }
 }
 
@@ -31,6 +43,7 @@ Deck::Deck(Settings settings, int *values) {
     initializeGreenCards(settings.greenCards, settings.greenCardValue);
     sort(values, settings.cardCount);
     initializeCards(settings, values);
+    shuffle(deck, deckSize);
 }
 
 void Deck::initializeGreenCards(int count, int value) const {

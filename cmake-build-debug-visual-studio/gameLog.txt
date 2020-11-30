@@ -1,21 +1,21 @@
 active player = 1
 players number = 8
 explosion threshold =  13
-1 player hand cards: 4 green 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 4 blue 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 7 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 7 blue 
 2 player deck cards: 
-3 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 2 violet 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 4 green 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 blue 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+5 player hand cards: 1 blue 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+6 player hand cards: 7 red 1 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 1 red 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 1 violet 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 green 4 blue 1 red 5 red 2 violet 7 violet 
+8 player hand cards: 4 green 4 red 1 violet 1 violet 2 red 7 red 
 8 player deck cards: 
 1 pile cards: 
 2 pile cards: 
@@ -25,26 +25,26 @@ The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
 1 1 1 2 2 2 4 4 5 5 5 7 7 7 
 The current state of the game is ok
-active player = 2
+ISSUEactive player = 2
 players number = 8
 explosion threshold =  13
-1 player hand cards: 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 7 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 7 blue 
 2 player deck cards: 
-3 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 2 violet 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 4 green 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 blue 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+5 player hand cards: 1 blue 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+6 player hand cards: 7 red 1 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 1 red 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 1 violet 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 green 4 blue 1 red 5 red 2 violet 7 violet 
+8 player hand cards: 4 green 4 red 1 violet 1 violet 2 red 7 red 
 8 player deck cards: 
-1 pile cards: 4 green 
+1 pile cards: 4 blue 
 2 pile cards: 
 3 pile cards: 
 Found 8 green cards, all with 4 value
@@ -55,24 +55,24 @@ The current state of the game is ok
 active player = 3
 players number = 8
 explosion threshold =  13
-1 player hand cards: 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 2 violet 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 4 green 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 blue 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+5 player hand cards: 1 blue 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+6 player hand cards: 7 red 1 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 1 red 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 1 violet 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 green 4 blue 1 red 5 red 2 violet 7 violet 
+8 player hand cards: 4 green 4 red 1 violet 1 violet 2 red 7 red 
 8 player deck cards: 
-1 pile cards: 4 green 
-2 pile cards: 7 violet 
+1 pile cards: 4 blue 7 blue 
+2 pile cards: 
 3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
@@ -82,25 +82,25 @@ The current state of the game is ok
 active player = 4
 players number = 8
 explosion threshold =  13
-1 player hand cards: 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 4 green 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 blue 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+5 player hand cards: 1 blue 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+6 player hand cards: 7 red 1 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 1 red 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 1 violet 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 green 4 blue 1 red 5 red 2 violet 7 violet 
+8 player hand cards: 4 green 4 red 1 violet 1 violet 2 red 7 red 
 8 player deck cards: 
-1 pile cards: 4 green 
-2 pile cards: 7 violet 
-3 pile cards: 1 blue 
+1 pile cards: 4 blue 7 blue 
+2 pile cards: 2 violet 
+3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -109,25 +109,25 @@ The current state of the game is ok
 active player = 5
 players number = 8
 explosion threshold =  13
-1 player hand cards: 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+5 player hand cards: 1 blue 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+6 player hand cards: 7 red 1 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 1 red 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 1 violet 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 green 4 blue 1 red 5 red 2 violet 7 violet 
+8 player hand cards: 4 green 4 red 1 violet 1 violet 2 red 7 red 
 8 player deck cards: 
-1 pile cards: 4 green 4 green 
-2 pile cards: 7 violet 
-3 pile cards: 1 blue 
+1 pile cards: 4 blue 7 blue 1 blue 
+2 pile cards: 2 violet 
+3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -136,25 +136,25 @@ The current state of the game is ok
 active player = 6
 players number = 8
 explosion threshold =  13
-1 player hand cards: 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
+5 player hand cards: 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 1 violet 5 violet 
+6 player hand cards: 7 red 1 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 1 red 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 1 violet 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 green 4 blue 1 red 5 red 2 violet 7 violet 
+8 player hand cards: 4 green 4 red 1 violet 1 violet 2 red 7 red 
 8 player deck cards: 
-1 pile cards: 4 green 4 green 
-2 pile cards: 7 violet 1 violet 
-3 pile cards: 1 blue 
+1 pile cards: 4 blue 7 blue 1 blue 1 blue 
+2 pile cards: 2 violet 
+3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -163,25 +163,25 @@ The current state of the game is ok
 active player = 7
 players number = 8
 explosion threshold =  13
-1 player hand cards: 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
+5 player hand cards: 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
+6 player hand cards: 7 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 1 red 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 1 violet 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 green 4 blue 1 red 5 red 2 violet 7 violet 
+8 player hand cards: 4 green 4 red 1 violet 1 violet 2 red 7 red 
 8 player deck cards: 
-1 pile cards: 4 green 4 green 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 
+1 pile cards: 4 blue 7 blue 1 blue 1 blue 
+2 pile cards: 2 violet 
+3 pile cards: 1 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -190,25 +190,25 @@ The current state of the game is ok
 active player = 8
 players number = 8
 explosion threshold =  13
-1 player hand cards: 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
+5 player hand cards: 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
+6 player hand cards: 7 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 green 4 blue 1 red 5 red 2 violet 7 violet 
+8 player hand cards: 4 green 4 red 1 violet 1 violet 2 red 7 red 
 8 player deck cards: 
-1 pile cards: 4 green 4 green 1 red 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 
+1 pile cards: 4 blue 7 blue 1 blue 1 blue 
+2 pile cards: 2 violet 1 violet 
+3 pile cards: 1 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -217,241 +217,25 @@ The current state of the game is ok
 active player = 1
 players number = 8
 explosion threshold =  13
-1 player hand cards: 1 blue 5 blue 1 red 5 red 2 violet 7 violet 
+1 player hand cards: 7 blue 4 blue 2 violet 5 violet 5 red 2 red 
 1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 5 blue 2 red 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 blue 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
+5 player hand cards: 4 green 4 violet 2 blue 7 violet 2 red 
 5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
+6 player hand cards: 7 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 1 violet 5 violet 
+7 player hand cards: 5 blue 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 2 violet 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 1 red 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 4 green 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 2
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 7 violet 
-1 player deck cards: 
-2 player hand cards: 4 green 1 blue 5 blue 2 red 7 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 4 green 5 blue 2 red 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 2 blue 7 blue 2 red 7 red 4 violet 
-4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 1 violet 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 2 violet 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 1 red 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 4 green 1 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 3
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 7 violet 
-1 player deck cards: 
-2 player hand cards: 4 green 1 blue 2 red 7 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 4 green 5 blue 2 red 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 2 blue 7 blue 2 red 7 red 4 violet 
-4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 1 violet 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 2 violet 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 1 red 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 4
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 7 violet 
-1 player deck cards: 
-2 player hand cards: 4 green 1 blue 2 red 7 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 4 green 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 2 blue 7 blue 2 red 7 red 4 violet 
-4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 1 violet 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 2 violet 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 1 red 2 red 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 5
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 7 violet 
-1 player deck cards: 
-2 player hand cards: 4 green 1 blue 2 red 7 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 4 green 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 7 blue 2 red 7 red 4 violet 
-4 player deck cards: 
-5 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 1 violet 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 2 violet 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 1 red 2 red 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 2 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-ISSUEactive player = 6
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 7 violet 
-1 player deck cards: 
-2 player hand cards: 4 green 1 blue 2 red 7 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 4 green 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 7 blue 2 red 7 red 4 violet 
-4 player deck cards: 
-5 player hand cards: 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 4 green 2 blue 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 1 violet 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 2 violet 7 violet 
-8 player deck cards: 
+8 player hand cards: 4 red 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
 1 pile cards: 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 2 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-ISSUEactive player = 7
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 7 violet 
-1 player deck cards: 
-2 player hand cards: 4 green 1 blue 2 red 7 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 4 green 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 7 blue 2 red 7 red 4 violet 
-4 player deck cards: 
-5 player hand cards: 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 2 blue 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 1 violet 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 2 violet 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 
-2 pile cards: 7 violet 1 violet 1 violet 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 2 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 8
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 7 violet 
-1 player deck cards: 
-2 player hand cards: 4 green 1 blue 2 red 7 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 4 green 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 7 blue 2 red 7 red 4 violet 
-4 player deck cards: 
-5 player hand cards: 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 2 blue 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 2 violet 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 
-2 pile cards: 7 violet 1 violet 1 violet 1 violet 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 2 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 1
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 7 violet 
-1 player deck cards: 
-2 player hand cards: 4 green 1 blue 2 red 7 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 4 green 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 7 blue 2 red 7 red 4 violet 
-4 player deck cards: 
-5 player hand cards: 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 2 blue 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 
-2 pile cards: 7 violet 1 violet 1 violet 1 violet 2 violet 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 2 blue 
+2 pile cards: 2 violet 1 violet 
+3 pile cards: 1 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -460,25 +244,25 @@ The current state of the game is ok
 active player = 2
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 7 red 2 violet 
+1 player hand cards: 7 blue 4 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 7 violet 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 5 blue 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 2 blue 7 blue 4 red 5 violet 
+5 player hand cards: 4 green 4 violet 2 blue 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 5 violet 
+7 player hand cards: 5 blue 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 
-2 pile cards: 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 2 blue 
+8 player hand cards: 4 red 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 
+2 pile cards: 2 violet 1 violet 2 violet 
+3 pile cards: 1 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -487,25 +271,25 @@ The current state of the game is ok
 active player = 3
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 2 violet 
+1 player hand cards: 7 blue 4 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 4 green 5 blue 7 red 4 violet 
+3 player hand cards: 5 violet 4 green 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 2 blue 7 blue 4 red 5 violet 
+5 player hand cards: 4 green 4 violet 2 blue 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 5 violet 
+7 player hand cards: 5 blue 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 
-2 pile cards: 7 red 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 2 blue 
+8 player hand cards: 4 red 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 
+2 pile cards: 2 violet 1 violet 2 violet 7 violet 
+3 pile cards: 1 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -514,25 +298,25 @@ The current state of the game is ok
 active player = 4
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 2 violet 
+1 player hand cards: 7 blue 4 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 5 blue 7 red 4 violet 
+3 player hand cards: 5 violet 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 7 blue 2 red 7 red 4 violet 
+4 player hand cards: 1 red 1 red 7 violet 4 violet 4 green 
 4 player deck cards: 
-5 player hand cards: 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 2 blue 7 blue 4 red 5 violet 
+5 player hand cards: 4 green 4 violet 2 blue 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 5 violet 
+7 player hand cards: 5 blue 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 
-2 pile cards: 7 red 
-3 pile cards: 1 blue 4 green 1 blue 5 blue 2 blue 
+8 player hand cards: 4 red 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 
+2 pile cards: 2 violet 1 violet 2 violet 7 violet 
+3 pile cards: 1 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -541,24 +325,456 @@ The current state of the game is ok
 active player = 5
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 2 violet 
+1 player hand cards: 7 blue 4 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 5 violet 4 green 1 blue 4 green 
 2 player deck cards: 
-3 player hand cards: 5 blue 7 red 4 violet 
+3 player hand cards: 5 violet 5 blue 4 green 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 red 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 2 blue 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 2 blue 7 blue 4 red 5 violet 
+4 player hand cards: 1 red 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 2 blue 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 2 blue 5 red 7 blue 2 violet 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 5 violet 
+7 player hand cards: 5 blue 4 red 7 red 5 red 4 green 
 7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 7 violet 
-8 player deck cards: 
+8 player hand cards: 4 red 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 
+2 pile cards: 2 violet 1 violet 2 violet 7 violet 
+3 pile cards: 1 red 1 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 6
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 4 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 5 violet 4 green 1 blue 4 green 
+2 player deck cards: 
+3 player hand cards: 5 violet 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 1 red 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 2 blue 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 4 red 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 4 red 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 
+2 pile cards: 2 violet 1 violet 2 violet 7 violet 
+3 pile cards: 1 red 1 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 7
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 4 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 5 violet 4 green 1 blue 4 green 
+2 player deck cards: 
+3 player hand cards: 5 violet 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 1 red 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 4 red 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 4 red 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 
+2 pile cards: 2 violet 1 violet 2 violet 7 violet 
+3 pile cards: 1 red 1 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 8
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 4 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 5 violet 4 green 1 blue 4 green 
+2 player deck cards: 
+3 player hand cards: 5 violet 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 1 red 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 4 red 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 
+2 pile cards: 2 violet 1 violet 2 violet 7 violet 
+3 pile cards: 1 red 1 red 4 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 1
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 4 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 5 violet 4 green 1 blue 4 green 
+2 player deck cards: 
+3 player hand cards: 5 violet 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 1 red 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 
+2 pile cards: 2 violet 1 violet 2 violet 7 violet 
+3 pile cards: 1 red 1 red 4 red 4 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 2
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 5 violet 4 green 1 blue 4 green 
+2 player deck cards: 
+3 player hand cards: 5 violet 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 1 red 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 4 blue 
+2 pile cards: 2 violet 1 violet 2 violet 7 violet 
+3 pile cards: 1 red 1 red 4 red 4 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 3
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 4 green 1 blue 4 green 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 violet 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 1 red 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 4 blue 
+2 pile cards: 
+3 pile cards: 1 red 1 red 4 red 4 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 4
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 4 green 1 blue 4 green 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 1 red 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 4 blue 
+2 pile cards: 5 violet 
+3 pile cards: 1 red 1 red 4 red 4 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 5
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 4 green 1 blue 4 green 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 2 red 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 4 blue 
+2 pile cards: 5 violet 
+3 pile cards: 1 red 1 red 4 red 4 red 1 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 6
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 4 green 1 blue 4 green 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 2 violet 
+6 player deck cards: 
+7 player hand cards: 5 blue 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 4 blue 
+2 pile cards: 5 violet 
+3 pile cards: 1 red 1 red 4 red 4 red 1 red 2 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 7
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 4 green 1 blue 4 green 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 7 red 5 red 4 green 
+7 player deck cards: 
+8 player hand cards: 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 4 blue 
+2 pile cards: 5 violet 2 violet 
+3 pile cards: 1 red 1 red 4 red 4 red 1 red 2 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 8
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 4 green 1 blue 4 green 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 4 green 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 4 blue 
+2 pile cards: 5 violet 2 violet 
+3 pile cards: 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 1
+players number = 8
+explosion threshold =  13
+1 player hand cards: 7 blue 5 violet 5 red 2 red 
+1 player deck cards: 
+2 player hand cards: 2 blue 4 green 1 blue 4 green 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 4 green 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 2 blue 2 blue 4 blue 
+2 pile cards: 5 violet 2 violet 1 violet 
+3 pile cards: 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 2
+players number = 8
+explosion threshold =  13
+1 player hand cards: 5 violet 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 4 green 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 4 green 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 
+2 pile cards: 5 violet 2 violet 1 violet 
+3 pile cards: 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 3
+players number = 8
+explosion threshold =  13
+1 player hand cards: 5 violet 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 4 green 5 blue 
+3 player deck cards: 
+4 player hand cards: 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 4 green 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 
+2 pile cards: 5 violet 2 violet 1 violet 
+3 pile cards: 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 4
+players number = 8
+explosion threshold =  13
+1 player hand cards: 5 violet 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 5 blue 
+3 player deck cards: 
+4 player hand cards: 7 violet 4 violet 4 green 
+4 player deck cards: 
+5 player hand cards: 4 green 4 violet 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 4 green 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
 1 pile cards: 4 green 4 green 
-2 pile cards: 7 red 
+2 pile cards: 5 violet 2 violet 1 violet 
+3 pile cards: 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 5
+players number = 8
+explosion threshold =  13
+1 player hand cards: 5 violet 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 violet 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 
+5 player hand cards: 4 green 4 violet 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 4 green 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 4 green 
+2 pile cards: 
 3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
@@ -568,25 +784,25 @@ The current state of the game is ok
 active player = 6
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 4 violet 
+1 player hand cards: 5 violet 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 red 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 2 blue 7 blue 4 red 5 violet 
+4 player hand cards: 4 violet 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 
+5 player hand cards: 4 green 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 5 red 7 blue 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 7 violet 
-8 player deck cards: 
+7 player hand cards: 5 blue 5 red 4 green 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
 1 pile cards: 4 green 4 green 
-2 pile cards: 7 red 
-3 pile cards: 2 blue 
+2 pile cards: 4 violet 
+3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -595,25 +811,25 @@ The current state of the game is ok
 active player = 7
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 4 violet 
+1 player hand cards: 5 violet 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 red 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 7 blue 4 red 5 violet 
+4 player hand cards: 4 violet 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 
+5 player hand cards: 4 green 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 7 blue 
 6 player deck cards: 
-7 player hand cards: 4 green 4 blue 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 7 violet 
-8 player deck cards: 
+7 player hand cards: 5 blue 5 red 4 green 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
 1 pile cards: 4 green 4 green 
-2 pile cards: 7 red 
-3 pile cards: 2 blue 2 blue 
+2 pile cards: 4 violet 
+3 pile cards: 5 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -622,106 +838,106 @@ The current state of the game is ok
 active player = 8
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 4 violet 
+1 player hand cards: 5 violet 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 5 blue 
 3 player deck cards: 
-4 player hand cards: 2 red 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 7 blue 4 red 5 violet 
+4 player hand cards: 4 violet 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 
+5 player hand cards: 4 green 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 7 blue 
 6 player deck cards: 
-7 player hand cards: 4 green 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 4 blue 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 
-2 pile cards: 7 red 
-3 pile cards: 2 blue 2 blue 4 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 1
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 1 red 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 2 red 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 
-2 pile cards: 7 red 
-3 pile cards: 2 blue 2 blue 4 blue 4 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 2
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 4 green 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 2 red 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 green 4 green 
-2 pile cards: 7 red 1 red 
-3 pile cards: 2 blue 2 blue 4 blue 4 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 3
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 4 violet 
-3 player deck cards: 
-4 player hand cards: 2 red 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 1 red 5 red 7 violet 
-8 player deck cards: 
+7 player hand cards: 5 blue 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 1 violet 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
 1 pile cards: 4 green 4 green 4 green 
-2 pile cards: 7 red 1 red 
-3 pile cards: 2 blue 2 blue 4 blue 4 blue 
+2 pile cards: 4 violet 
+3 pile cards: 5 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 1
+players number = 8
+explosion threshold =  13
+1 player hand cards: 5 violet 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 violet 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 
+5 player hand cards: 4 green 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 4 green 4 green 
+2 pile cards: 4 violet 1 violet 
+3 pile cards: 5 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 2
+players number = 8
+explosion threshold =  13
+1 player hand cards: 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 2 blue 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 
+3 player hand cards: 5 blue 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 violet 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 
+5 player hand cards: 4 green 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 4 green 4 green 4 green 
+2 pile cards: 4 violet 1 violet 5 violet 
+3 pile cards: 5 red 
+Found 8 green cards, all with 4 value
+The number cards of all colors is equal: 14
+The values of cards of all colors are identical:
+1 1 1 2 2 2 4 4 5 5 5 7 7 7 
+The current state of the game is ok
+active player = 3
+players number = 8
+explosion threshold =  13
+1 player hand cards: 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 violet 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 
+5 player hand cards: 4 green 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 7 blue 
+6 player deck cards: 
+7 player hand cards: 5 blue 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 
+2 pile cards: 4 violet 1 violet 5 violet 
+3 pile cards: 5 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -730,25 +946,25 @@ The current state of the game is ok
 active player = 4
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 
-4 player hand cards: 2 red 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 7 blue 4 red 5 violet 
+1 player hand cards: 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 violet 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 
+5 player hand cards: 4 green 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 7 blue 
 6 player deck cards: 
-7 player hand cards: 4 green 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 
-2 pile cards: 7 red 1 red 
-3 pile cards: 2 blue 2 blue 4 blue 4 blue 
+7 player hand cards: 5 blue 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 5 blue 
+2 pile cards: 4 violet 1 violet 5 violet 
+3 pile cards: 5 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -757,241 +973,25 @@ The current state of the game is ok
 active player = 5
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 blue 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 
-4 player hand cards: 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 7 blue 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 
-6 player hand cards: 7 blue 4 red 5 violet 
+1 player hand cards: 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 4 green 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 7 blue 
 6 player deck cards: 
-7 player hand cards: 4 green 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 
-2 pile cards: 7 red 1 red 2 red 
-3 pile cards: 2 blue 2 blue 4 blue 4 blue 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-ISSUEactive player = 6
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 
-4 player hand cards: 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 7 blue 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 
-2 pile cards: 7 red 1 red 2 red 
-3 pile cards: 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-ISSUEactive player = 7
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 
-4 player hand cards: 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 4 green 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 7 blue 
-2 pile cards: 7 red 1 red 2 red 
-3 pile cards: 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 8
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 
-4 player hand cards: 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 1 red 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 7 blue 
-2 pile cards: 7 red 1 red 2 red 
-3 pile cards: 4 green 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 1
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 blue 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 
-4 player hand cards: 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 7 blue 
-2 pile cards: 7 red 1 red 2 red 1 red 
-3 pile cards: 4 green 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 2
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 2 violet 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 
-4 player hand cards: 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 7 blue 5 blue 
-2 pile cards: 7 red 1 red 2 red 1 red 
-3 pile cards: 4 green 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 3
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 
-2 player deck cards: 
-3 player hand cards: 5 blue 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 
-4 player hand cards: 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 7 blue 5 blue 
-2 pile cards: 7 red 1 red 2 red 1 red 
-3 pile cards: 4 green 2 violet 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-ISSUEactive player = 4
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 
-2 player deck cards: 
-3 player hand cards: 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 
-4 player hand cards: 7 red 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 
-5 player hand cards: 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 
-2 pile cards: 7 red 1 red 2 red 1 red 
-3 pile cards: 4 green 2 violet 
-Found 8 green cards, all with 4 value
-The number cards of all colors is equal: 14
-The values of cards of all colors are identical:
-1 1 1 2 2 2 4 4 5 5 5 7 7 7 
-The current state of the game is ok
-active player = 5
-players number = 8
-explosion threshold =  13
-1 player hand cards: 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 
-2 player deck cards: 
-3 player hand cards: 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 
-4 player hand cards: 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 
-5 player hand cards: 4 red 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 4 red 5 violet 
-6 player deck cards: 
-7 player hand cards: 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 
+7 player hand cards: 5 blue 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 5 blue 
 2 pile cards: 
-3 pile cards: 4 green 2 violet 
+3 pile cards: 5 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1000,25 +1000,25 @@ The current state of the game is ok
 active player = 6
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 
-2 player deck cards: 
-3 player hand cards: 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 
-4 player hand cards: 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 
-5 player hand cards: 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 4 red 5 violet 
+1 player hand cards: 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 red 7 blue 
 6 player deck cards: 
-7 player hand cards: 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 red 
-2 pile cards: 
-3 pile cards: 4 green 2 violet 
+7 player hand cards: 5 blue 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 5 blue 
+2 pile cards: 4 green 
+3 pile cards: 5 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1027,25 +1027,25 @@ The current state of the game is ok
 active player = 7
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 
-2 player deck cards: 
-3 player hand cards: 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 
-4 player hand cards: 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 
-5 player hand cards: 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 5 violet 
+1 player hand cards: 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 blue 
 6 player deck cards: 
-7 player hand cards: 5 red 5 violet 
-7 player deck cards: 
-8 player hand cards: 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 red 4 red 
-2 pile cards: 
-3 pile cards: 4 green 2 violet 
+7 player hand cards: 5 blue 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 5 blue 
+2 pile cards: 4 green 
+3 pile cards: 5 red 7 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1054,25 +1054,25 @@ The current state of the game is ok
 active player = 8
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 
-2 player deck cards: 
-3 player hand cards: 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 
-4 player hand cards: 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 
-5 player hand cards: 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 5 violet 
+1 player hand cards: 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 blue 
 6 player deck cards: 
 7 player hand cards: 5 red 
-7 player deck cards: 
-8 player hand cards: 5 red 7 violet 
-8 player deck cards: 
-1 pile cards: 4 red 4 red 
-2 pile cards: 
-3 pile cards: 4 green 2 violet 5 violet 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 2 red 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 
+1 pile cards: 5 blue 5 blue 
+2 pile cards: 4 green 
+3 pile cards: 5 red 7 red 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1081,52 +1081,52 @@ The current state of the game is ok
 active player = 1
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 2 violet 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 
-2 player deck cards: 
-3 player hand cards: 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 
-4 player hand cards: 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 
-5 player hand cards: 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 5 violet 
+1 player hand cards: 5 red 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 blue 
 6 player deck cards: 
 7 player hand cards: 5 red 
-7 player deck cards: 
-8 player hand cards: 7 violet 
-8 player deck cards: 
-1 pile cards: 4 red 4 red 5 red 
-2 pile cards: 
-3 pile cards: 4 green 2 violet 5 violet 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 5 blue 5 blue 
+2 pile cards: 4 green 
+3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
 1 1 1 2 2 2 4 4 5 5 5 7 7 7 
 The current state of the game is ok
-active player = 2
+ISSUEactive player = 2
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 1 blue 2 red 
-2 player deck cards: 
-3 player hand cards: 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 
-4 player hand cards: 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 
-5 player hand cards: 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 5 violet 
+1 player hand cards: 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 4 green 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 blue 
 6 player deck cards: 
 7 player hand cards: 5 red 
-7 player deck cards: 
-8 player hand cards: 7 violet 
-8 player deck cards: 
-1 pile cards: 4 red 4 red 5 red 
-2 pile cards: 
-3 pile cards: 4 green 2 violet 5 violet 2 violet 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 5 blue 5 blue 
+2 pile cards: 4 green 5 red 
+3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1135,52 +1135,52 @@ The current state of the game is ok
 active player = 3
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 2 red 
-2 player deck cards: 
-3 player hand cards: 7 red 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 
-4 player hand cards: 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 
-5 player hand cards: 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 5 violet 
+1 player hand cards: 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
+3 player hand cards: 5 blue 
+3 player deck cards: 
+4 player hand cards: 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 blue 
 6 player deck cards: 
 7 player hand cards: 5 red 
-7 player deck cards: 
-8 player hand cards: 7 violet 
-8 player deck cards: 
-1 pile cards: 4 red 4 red 5 red 
-2 pile cards: 1 blue 
-3 pile cards: 4 green 2 violet 5 violet 2 violet 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 5 blue 5 blue 
+2 pile cards: 4 green 5 red 4 green 
+3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
 1 1 1 2 2 2 4 4 5 5 5 7 7 7 
 The current state of the game is ok
-ISSUEactive player = 4
+active player = 4
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 2 red 
-2 player deck cards: 
+1 player hand cards: 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
 3 player hand cards: 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 4 red 4 red 5 red 7 red 
-4 player hand cards: 4 violet 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 
-5 player hand cards: 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 5 violet 
+3 player deck cards: 5 blue 5 blue 5 blue 
+4 player hand cards: 4 green 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 blue 
 6 player deck cards: 
 7 player hand cards: 5 red 
-7 player deck cards: 
-8 player hand cards: 7 violet 
-8 player deck cards: 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
 1 pile cards: 
-2 pile cards: 1 blue 
-3 pile cards: 4 green 2 violet 5 violet 2 violet 
+2 pile cards: 4 green 5 red 4 green 
+3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1189,24 +1189,24 @@ The current state of the game is ok
 active player = 5
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 2 red 
-2 player deck cards: 
+1 player hand cards: 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
 3 player hand cards: 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 4 red 4 red 5 red 7 red 
+3 player deck cards: 5 blue 5 blue 5 blue 
 4 player hand cards: 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 4 green 2 violet 5 violet 2 violet 4 violet 
-5 player hand cards: 5 violet 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 5 violet 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
+5 player hand cards: 7 violet 
+5 player deck cards: 
+6 player hand cards: 7 blue 
 6 player deck cards: 
 7 player hand cards: 5 red 
-7 player deck cards: 
-8 player hand cards: 7 violet 
-8 player deck cards: 
-1 pile cards: 
-2 pile cards: 1 blue 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 4 green 
+2 pile cards: 4 green 5 red 4 green 
 3 pile cards: 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
@@ -1216,25 +1216,25 @@ The current state of the game is ok
 active player = 6
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 2 red 
-2 player deck cards: 
+1 player hand cards: 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
 3 player hand cards: 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 4 red 4 red 5 red 7 red 
+3 player deck cards: 5 blue 5 blue 5 blue 
 4 player hand cards: 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 4 green 2 violet 5 violet 2 violet 4 violet 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
 5 player hand cards: 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
-6 player hand cards: 5 violet 
+5 player deck cards: 
+6 player hand cards: 7 blue 
 6 player deck cards: 
 7 player hand cards: 5 red 
-7 player deck cards: 
-8 player hand cards: 7 violet 
-8 player deck cards: 
-1 pile cards: 5 violet 
-2 pile cards: 1 blue 
-3 pile cards: 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 4 green 
+2 pile cards: 4 green 5 red 4 green 
+3 pile cards: 7 violet 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1243,25 +1243,25 @@ The current state of the game is ok
 active player = 7
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 2 red 
-2 player deck cards: 
+1 player hand cards: 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
 3 player hand cards: 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 4 red 4 red 5 red 7 red 
+3 player deck cards: 5 blue 5 blue 5 blue 
 4 player hand cards: 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 4 green 2 violet 5 violet 2 violet 4 violet 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
 5 player hand cards: 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
+5 player deck cards: 
 6 player hand cards: 
 6 player deck cards: 
 7 player hand cards: 5 red 
-7 player deck cards: 
-8 player hand cards: 7 violet 
-8 player deck cards: 
-1 pile cards: 5 violet 5 violet 
-2 pile cards: 1 blue 
-3 pile cards: 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 
+8 player hand cards: 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 4 green 7 blue 
+2 pile cards: 4 green 5 red 4 green 
+3 pile cards: 7 violet 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1270,25 +1270,25 @@ The current state of the game is ok
 active player = 8
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 2 red 
-2 player deck cards: 
+1 player hand cards: 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
 3 player hand cards: 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 4 red 4 red 5 red 7 red 
+3 player deck cards: 5 blue 5 blue 5 blue 
 4 player hand cards: 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 4 green 2 violet 5 violet 2 violet 4 violet 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
 5 player hand cards: 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
+5 player deck cards: 
 6 player hand cards: 
 6 player deck cards: 
 7 player hand cards: 
-7 player deck cards: 
-8 player hand cards: 7 violet 
-8 player deck cards: 
-1 pile cards: 5 violet 5 violet 
-2 pile cards: 1 blue 
-3 pile cards: 5 red 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 4 green 5 red 4 green 5 red 
+8 player hand cards: 7 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 4 green 7 blue 
+2 pile cards: 
+3 pile cards: 7 violet 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1297,25 +1297,25 @@ The current state of the game is ok
 active player = 1
 players number = 8
 explosion threshold =  13
-1 player hand cards: 5 red 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 2 red 
-2 player deck cards: 
+1 player hand cards: 2 red 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
 3 player hand cards: 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 4 red 4 red 5 red 7 red 
+3 player deck cards: 5 blue 5 blue 5 blue 
 4 player hand cards: 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 4 green 2 violet 5 violet 2 violet 4 violet 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
 5 player hand cards: 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
+5 player deck cards: 
 6 player hand cards: 
 6 player deck cards: 
 7 player hand cards: 
-7 player deck cards: 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 4 green 5 red 4 green 5 red 
 8 player hand cards: 
-8 player deck cards: 5 violet 5 violet 7 violet 
-1 pile cards: 
-2 pile cards: 1 blue 
-3 pile cards: 5 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 4 green 7 blue 
+2 pile cards: 7 red 
+3 pile cards: 7 violet 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1325,24 +1325,24 @@ active player = 2
 players number = 8
 explosion threshold =  13
 1 player hand cards: 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
-2 player hand cards: 2 red 
-2 player deck cards: 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
+2 player hand cards: 1 blue 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
 3 player hand cards: 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 4 red 4 red 5 red 7 red 
+3 player deck cards: 5 blue 5 blue 5 blue 
 4 player hand cards: 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 4 green 2 violet 5 violet 2 violet 4 violet 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
 5 player hand cards: 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
+5 player deck cards: 
 6 player hand cards: 
 6 player deck cards: 
 7 player hand cards: 
-7 player deck cards: 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 4 green 5 red 4 green 5 red 
 8 player hand cards: 
-8 player deck cards: 5 violet 5 violet 7 violet 
-1 pile cards: 
-2 pile cards: 1 blue 
-3 pile cards: 5 red 5 red 
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 4 green 7 blue 
+2 pile cards: 7 red 2 red 
+3 pile cards: 7 violet 
 Found 8 green cards, all with 4 value
 The number cards of all colors is equal: 14
 The values of cards of all colors are identical:
@@ -1352,31 +1352,31 @@ active player = 3
 players number = 8
 explosion threshold =  13
 1 player hand cards: 
-1 player deck cards: 7 violet 1 violet 1 violet 1 violet 2 violet 7 violet 
+1 player deck cards: 4 green 2 blue 2 blue 4 blue 7 blue 
 2 player hand cards: 
-2 player deck cards: 
+2 player deck cards: 2 violet 1 violet 2 violet 7 violet 5 violet 4 green 4 green 4 green 2 blue 
 3 player hand cards: 
-3 player deck cards: 4 green 4 green 4 green 4 violet 7 blue 5 blue 5 blue 4 red 4 red 5 red 7 red 
+3 player deck cards: 5 blue 5 blue 5 blue 
 4 player hand cards: 
-4 player deck cards: 1 blue 4 green 1 blue 5 blue 2 blue 7 blue 7 red 1 red 2 red 1 red 7 red 4 green 2 violet 5 violet 2 violet 4 violet 
+4 player deck cards: 5 violet 2 violet 1 violet 7 violet 4 violet 1 violet 5 violet 4 violet 
 5 player hand cards: 
-5 player deck cards: 4 green 4 green 1 red 2 red 4 green 2 blue 2 blue 4 blue 4 blue 7 blue 
+5 player deck cards: 
 6 player hand cards: 
 6 player deck cards: 
 7 player hand cards: 
-7 player deck cards: 
+7 player deck cards: 1 red 1 red 4 red 4 red 1 red 2 red 7 red 4 green 5 red 4 green 5 red 
 8 player hand cards: 
-8 player deck cards: 5 violet 5 violet 7 violet 
-1 pile cards: 
-2 pile cards: 1 blue 
-3 pile cards: 5 red 5 red 2 red 
-Na kolor red odporny jest gracz 4
-Na kolor violet odporny jest gracz 1
-Wynik gracza 1 = 0
-Wynik gracza 2 = 0
-Wynik gracza 3 = 14
-Wynik gracza 4 = 13
-Wynik gracza 5 = 13
+8 player deck cards: 4 blue 7 blue 1 blue 1 blue 4 green 5 red 7 red 2 red 
+1 pile cards: 4 green 7 blue 1 blue 
+2 pile cards: 7 red 2 red 
+3 pile cards: 7 violet 
+Na kolor red odporny jest gracz 7
+Na kolor violet odporny jest gracz 4
+Wynik gracza 1 = 6
+Wynik gracza 2 = 12
+Wynik gracza 3 = 3
+Wynik gracza 4 = 0
+Wynik gracza 5 = 0
 Wynik gracza 6 = 0
-Wynik gracza 7 = 0
-Wynik gracza 8 = 3
+Wynik gracza 7 = 4
+Wynik gracza 8 = 9
