@@ -39,6 +39,8 @@ public:
 
     int GetExplosionThreshold();
 
+    int GetPlayerScore(int player);
+
     VALIDATION_RESULT ValidateGreenCards();
 
     VALIDATION_RESULT ValidateCards();
@@ -52,6 +54,8 @@ public:
     ~GameState();
 
 private:
+    int* getPlayerImmunity(int player);
+
     void handleExplosion(int player, int pile);
 
     void dealCards(Deck *deck, int players);

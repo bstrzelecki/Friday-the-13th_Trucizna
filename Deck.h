@@ -30,10 +30,11 @@ public:
 
     int GetFinalValue(const int immunity[]);
 
+private:
     int cardNumber;
     int deckSize;
     Card *deck;
-private:
+
     void initializeGreenCards(int count, int value) const;
 
     void initializeCards(Settings settings, int *values) const;

@@ -16,10 +16,10 @@ int *getCardValues(int count) {
 }
 
 Settings getSettings() {
-    int n, k, g, gv, o, e, r;
-    scanf("%i %i %i %i %i %i %i", &n, &k, &g, &gv, &o, &e, &r);
+    int n, k, g, gv, o, e, r, t;
+    scanf("%i %i %i %i %i %i %i %i", &n, &k, &g, &gv, &o, &e, &r, &t);
     return {
-            n, k, g, gv, o, g + k * o, e, 0, r
+            n, k, g, gv, o, g + k * o, e, 0, r, t
     };
 }
 void dumb(GameState* gameState){
@@ -78,7 +78,7 @@ void highestCard(GameState* gameState){
     int max = 0;
     int minPile = -1;
     int maxCount = MAX_VALUE * MAX_CARDS_ON_HAND;
-    for(int i = 0; i < deck->cardNumber;i++){
+    for(int i = 0; i < deck->GetCardsCount();i++){
         int value = deck->PeekCard(i).value;
         if(value > max){
             max = value;
@@ -129,7 +129,7 @@ void optimalCard(GameState* gameState){
     int max = 0;
     int maxIndex = -1;
     int minPile = -1;
-    for(int i =0; i < deck->cardNumber; i++){
+    for(int i =0; i < deck->GetCardsCount(); i++){
         int value = deck->PeekCard(i).value;
         if(value >= max){
             max = value;
@@ -165,7 +165,7 @@ void lowestCard(GameState* gameState){
     int min = MAX_VALUE;
     int minPile = -1;
     int minValue = MAX_VALUE * MAX_CARDS_ON_HAND;
-    for(int i = 0; i < deck->cardNumber;i++){
+    for(int i = 0; i < deck->GetCardsCount();i++){
         int value = deck->PeekCard(i).value;
         if(value < min){
             min = value;
@@ -218,7 +218,7 @@ void play(GameState* gameState) {
 
 
     void (*playerAction[])(GameState*) = {
-        avoidExplosion,
+        dumb,
         optimalCard,
         lowestCard,
         dumb,
@@ -230,10 +230,8 @@ void play(GameState* gameState) {
     playerAction[gameState->GetActivePlayer()](gameState);
 }
 
-GameState* generateState(Settings settings) {
-    int *values = getCardValues(settings.cardCount);
+GameState* generateState(Settings settings, int* values) {
     auto* gameState = new GameState(settings, new Deck(settings, values));
-    delete[] values;
     gameState->DisplayState();
     return gameState;
 }
@@ -245,23 +243,69 @@ int main(int argc, char **argv) {
     if (argc == 2) {
         if (argv[1][0] == 'g') {
             freopen("gameState.txt", "w", stdout);
-            gameState = generateState(getSettings());
+            const Settings settings = getSettings();
+            int *values = getCardValues(settings.cardCount);
+            gameState = generateState(settings, values);
+            delete[] values;
+            delete gameState;
         }
         if (argv[1][0] == 'v') {
             gameState = StateParser::ReadFromStream();
             freopen("validationResult.txt", "w", stdout);
             validateState(gameState);
+            delete gameState;
         }
         if(argv[1][0] == 'a'){
-            Settings settings = getSettings();
+            const Settings settings = getSettings();
+            int *values = getCardValues(settings.cardCount);
             freopen("gameLog.txt", "a", stdout);
-            gameState = generateState(settings);
-            while(gameState->IsGameOver() == 0){
-                gameState->DisplayValidationResult();
-                play(gameState);
-                gameState->DisplayState();
+            int* winners = new int[settings.players];
+            for(int i = 0; i < settings.players; i++){
+                winners[i] = 0;
             }
-            gameState->DisplayScore();
+            for(int t = 0; t < settings.games; t++){
+                int* scores = new int[settings.players];
+                for(int i = 0; i < settings.players; i++){
+                    scores[i] = 0;
+                }
+                int roundCounter = settings.rounds;
+                for(int i = roundCounter; i > 0; i--){
+                    gameState = generateState(settings, values);
+                    while(gameState->IsGameOver() == 0){
+                        gameState->DisplayValidationResult();
+                        play(gameState);
+                        gameState->DisplayState();
+                    }
+                    gameState->DisplayScore();
+                    for(int j = 0; j < settings.players; j++){
+                        scores[j] += gameState->GetPlayerScore(j);
+                    }
+                    delete gameState;
+                }
+                int min = MAX_VALUE*MAX_CARDS_ON_HAND;
+                for(int i = 0; i < settings.players; i++){
+                    if(scores[i] < min){
+                        min = scores[i];
+                    }
+                }
+                for(int i = 0; i < settings.players; i++){
+                    printf("Player %i has %i points.\n", i+1, scores[i]);
+                }
+                for(int i = 0; i < settings.players;i++){
+                    if(scores[i] == min){
+                        winners[i]++;
+                        printf("Player %i won!\n", i+1);
+                    }
+
+                }
+                delete [] scores;
+            }
+            printf("Final results:\n");
+            for(int i = 0; i < settings.players; i++){
+                printf("Player %i won %i times.\n",i+1,winners[i]);
+            }
+            delete[] values;
+            delete[] winners;
         }
     }else {
         gameState = StateParser::ReadFromStream();
@@ -272,8 +316,8 @@ int main(int argc, char **argv) {
             freopen("finalScore.txt", "w", stdout);
             gameState->DisplayScore();
         }
+        delete gameState;
     }
     fclose(stdout);
-    delete gameState;
     return 0;
 }

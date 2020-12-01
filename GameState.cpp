@@ -42,7 +42,7 @@ void GameState::dealCards(Deck *deck, int players) {
     int cardsGiven[MAX_PLAYERS] = {};
     int dealingTo = 0;
     int cardNumber = 0;
-    while (deck->cardNumber != 0) {
+    while (deck->GetCardsCount() != 0) {
         if (dealingTo >= players) {
             dealingTo = 0;
             cardNumber++;
@@ -58,6 +58,13 @@ void GameState::dealCards(Deck *deck, int players) {
 }
 
 GameState::~GameState() {
+    for(int i = 0; i < playersNumber; i++){
+        delete playerHand[i];
+        delete playerDeck[i];
+    }
+    for(int i = 0; i < piles; i++){
+        delete pileDeck[i];
+    }
     free(playerHand);
     free(playerDeck);
     free(pileDeck);
@@ -85,11 +92,11 @@ GameState::GameState(Settings settings, Card playerCards[MAX_PLAYERS][MAX_CARDS_
 
 void GameState::DisplayCardCount() {
     for (int i = 0; i < playersNumber; i++) {
-        printf("%i player has %i cards on hand\n", i + 1, playerHand[i]->cardNumber);
-        printf("%i player has %i cards in front of him\n", i + 1, playerDeck[i]->cardNumber);
+        printf("%i player has %i cards on hand\n", i + 1, playerHand[i]->GetCardsCount());
+        printf("%i player has %i cards in front of him\n", i + 1, playerDeck[i]->GetCardsCount());
     }
     for (int i = 0; i < piles; i++) {
-        printf("there are %i cards on %i pile\n", pileDeck[i]->cardNumber, i + 1);
+        printf("there are %i cards on %i pile\n", pileDeck[i]->GetCardsCount(), i + 1);
     }
 }
 
@@ -197,18 +204,18 @@ void displayColorValues(int valueCount[COLORS][MAX_VALUE]) {
 VALIDATION_RESULT GameState::ValidateCardValues() {
     int valueCount[COLORS][MAX_VALUE] = {};
     for (int i = 0; i < playersNumber; i++) {
-        for (int j = 0; j < playerHand[i]->cardNumber; j++) {
-            Card card = playerHand[i]->deck[j];
+        for (int j = 0; j < playerHand[i]->GetCardsCount(); j++) {
+            Card card = playerHand[i]->PeekCard(j);
             valueCount[card.color][card.value]++;
         }
-        for (int j = 0; j < playerDeck[i]->cardNumber; j++) {
-            Card card = playerDeck[i]->deck[j];
+        for (int j = 0; j < playerDeck[i]->GetCardsCount(); j++) {
+            Card card = playerDeck[i]->PeekCard(j);
             valueCount[card.color][card.value]++;
         }
     }
     for (int i = 0; i < piles; i++) {
-        for (int j = 0; j < pileDeck[i]->cardNumber; j++) {
-            Card card = pileDeck[i]->deck[j];
+        for (int j = 0; j < pileDeck[i]->GetCardsCount(); j++) {
+            Card card = pileDeck[i]->PeekCard(j);
             valueCount[card.color][card.value]++;
         }
     }
@@ -262,13 +269,13 @@ VALIDATION_RESULT GameState::ValidatePiles() {
 
 VALIDATION_RESULT GameState::ValidateHands() {
     for (int i = 0; i < playersNumber - 1; i++) {
-        if (playerHand[i]->cardNumber == playerHand[i + 1]->cardNumber) {
+        if (playerHand[i]->GetCardsCount() == playerHand[i + 1]->GetCardsCount()) {
             continue;
         }
-        if (playerHand[i]->cardNumber == (playerHand[i + 1]->cardNumber + 1)) {
+        if (playerHand[i]->GetCardsCount() == (playerHand[i + 1]->GetCardsCount() + 1)) {
             continue;
         }
-        if ((i + 1) == (activePlayer) && playerHand[i]->cardNumber == (playerHand[i + 1]->cardNumber - 1)) {
+        if ((i + 1) == (activePlayer) && playerHand[i]->GetCardsCount() == (playerHand[i + 1]->GetCardsCount() - 1)) {
             continue;
         }
         printf("The number of players cards on hand is wrong\n");
@@ -333,14 +340,13 @@ void GameState::Play(int cardPosition, int defaultPile) {
 
 void GameState::handleExplosion(int player, int pile) {
     if (pileDeck[pile]->GetCardsValue() > explosionThreshold) {
-        while (pileDeck[pile]->cardNumber > 0) {
+        while (pileDeck[pile]->GetCardsCount() > 0) {
             Card card = pileDeck[pile]->RemoveCard(0);
             playerDeck[player]->AddCard(card);
         }
     }
 }
-
-void GameState::DisplayScore() {
+int* GameState::getPlayerImmunity(int player) {
     int max[COLORS];
     for (int i = 1; i < COLORS; i++) {
         int localMax = -1;
@@ -361,17 +367,40 @@ void GameState::DisplayScore() {
         }
         max[i] = localMax;
     }
-    int immunity[MAX_PLAYERS][COLORS] = {};
+    int* immunity = new int[playersNumber];
     for (int i = 1; i < COLORS; i++) {
-        if (max[i] != -1) {
-            immunity[max[i]][i] = 1;
-            printf("Na kolor %s odporny jest gracz %i\n", colors[i], max[i] + 1);
+        if (max[i] == player) {
+            immunity[i] = 1;
+        }else{
+            immunity[i] = 0;
         }
     }
+    return immunity;
+}
+
+void GameState::DisplayScore() {
+    for (int i = 1; i < COLORS; i++) {
+        for(int j = 0; j < playersNumber; j++){
+            int* immunity = getPlayerImmunity(j);
+            if(immunity[i] == 1){
+                printf("Na kolor %s odporny jest gracz %i\n", colors[i], j + 1);
+            }
+            delete [] immunity;
+        }
+
+    }
     for (int i = 0; i < playersNumber; i++) {
-        printf("Wynik gracza %i = %i\n", i + 1, playerDeck[i]->GetFinalValue(immunity[i]));
+        printf("Wynik gracza %i = %i\n", i + 1, GetPlayerScore(i));
     }
 }
+
+int GameState::GetPlayerScore(int player) {
+    int* immunity = getPlayerImmunity(player);
+    int score = playerDeck[player]->GetFinalValue(immunity);
+    delete [] immunity;
+    return score;
+}
+
 
 void GameState::DisplayValidationResult() {
     if (ValidateGreenCards() == VALIDATION_SUCCESS &&
@@ -386,7 +415,7 @@ void GameState::DisplayValidationResult() {
 }
 
 int GameState::IsGameOver() {
-    if (playerHand[activePlayer]->cardNumber == 0) {
+    if (playerHand[activePlayer]->GetCardsCount() == 0) {
         return 1;
     } else {
         return 0;
@@ -437,4 +466,6 @@ Deck *GameState::GetActivePlayerDeck() {
 int GameState::GetActivePlayer() const {
     return activePlayer;
 }
+
+
 

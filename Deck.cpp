@@ -88,7 +88,6 @@ Card Deck::RemoveCard(int position) {
     for (int i = position; i < cardNumber - 1; i++) {
         deck[i] = deck[i + 1];
     }
-    deck[cardNumber] = {0, 0};
     cardNumber--;
     return removed;
 }
