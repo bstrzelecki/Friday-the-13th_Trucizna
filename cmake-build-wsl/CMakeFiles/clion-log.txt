@@ -1,0 +1,44 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/mabat/CLionProjects/POP202_1
+CMake Error at /usr/share/cmake-3.18/Modules/CMakeDetermineSystem.cmake:185 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- The C compiler identification is GNU 10.2.0
+CMake Error at /usr/share/cmake-3.18/Modules/CMakeDetermineCCompiler.cmake:222 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- The CXX compiler identification is unknown
+CMake Error at /usr/share/cmake-3.18/Modules/CMakeDetermineCXXCompiler.cmake:220 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc - works
+-- Detecting C compile features
+-- Detecting C compile features - done
+CMake Error at /usr/share/cmake-3.18/Modules/CMakeTestCCompiler.cmake:82 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_CXX_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/mnt/c/Users/mabat/CLionProjects/POP202_1/cmake-build-wsl/CMakeFiles/CMakeOutput.log".
+See also "/mnt/c/Users/mabat/CLionProjects/POP202_1/cmake-build-wsl/CMakeFiles/CMakeError.log".

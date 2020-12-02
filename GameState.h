@@ -13,6 +13,7 @@ public:
 
     void Play(int card, int defaultPile = 0);
 
+    // Output: 1 if number of cards in active player's hand is equal to 0 otherwise 0
     int IsGameOver();
 
     void DisplayState();
@@ -27,14 +28,21 @@ public:
 
     Deck* GetActivePlayerDeck();
 
+    // Output: pointer to crucible with given index
     Deck* GetPile(int n);
 
-    Deck* GetPileWithColor(int color);
+    // Input: color id
+    // Output: deck of cards where cards have either green of {color} color.
+    Deck* GetPileWithColor(COLOR color);
 
-    int GetPileIdWithColor(int color);
+    // Input: color id
+    // Output: index of deck of cards where cards have either green of {color} color.
+    int GetPileIdWithColor(COLOR color);
 
+    // Output: number of crucibles
     int GetPileCount() const;
 
+    // Output: number of currently acting player
     int GetActivePlayer() const;
 
     int GetExplosionThreshold();

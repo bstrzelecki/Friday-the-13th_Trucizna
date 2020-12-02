@@ -34,7 +34,6 @@ int loadLine(int i, Card deck[MAX_PLAYERS][MAX_CARDS_ON_HAND]) {
     while (true) {
         int value;
         char color[COLOR_MAX_LENGTH];
-        //FIXME
         if (scanf("%i", &value) != 1)break;
         if (scanf("%s", color) != 1)break;
 
@@ -82,13 +81,16 @@ GameState *StateParser::ReadFromStream() {
     int activePlayer;
     int explosionThreshold;
     char discard[32];
+    // Reads number of players, current player and crucible explosion threshold
     scanf("%s %s %s %i", discard, discard, discard, &activePlayer);
     scanf("%s %s %s %i", discard, discard, discard, &playersNumber);
     scanf("%s %s %s %i", discard, discard, discard, &explosionThreshold);
+    //
     Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND];
     Card cardsInDeck[MAX_PLAYERS][MAX_CARDS_ON_HAND];
     int cardsGiven[MAX_PLAYERS] = {};
     int cardsOnHold[MAX_PLAYERS] = {};
+    // Reads content of players@ hands and decks
     for (int i = 0; i < playersNumber; i++) {
         scanf("%s %s", discard, discard);
         if (i == 0) {
@@ -101,6 +103,7 @@ GameState *StateParser::ReadFromStream() {
     Card cardsOnPiles[MAX_PILES][MAX_CARDS_ON_HAND];
     int numberCardOnPiles[MAX_PILES];
     int piles = getCrucibleCount(cardsOnHand, cardsInDeck, playersNumber, cardsGiven, cardsOnHold);
+    // Read content of crucibles
     for (int i = 0; i < piles; i++) {
         scanf("%s", discard);
         numberCardOnPiles[i] = loadLine(i, cardsOnPiles);

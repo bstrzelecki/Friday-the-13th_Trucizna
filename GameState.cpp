@@ -409,8 +409,6 @@ void GameState::DisplayValidationResult() {
         ValidateHands() == VALIDATION_SUCCESS &&
         ValidatePiles() == VALIDATION_SUCCESS) {
         printf("The current state of the game is ok\n");
-    } else {
-        printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
     }
 }
 
@@ -439,7 +437,7 @@ int GameState::GetPileCount() const {
     return piles;
 }
 
-Deck *GameState::GetPileWithColor(int color) {
+Deck *GameState::GetPileWithColor(COLOR color) {
     for(int i = 0; i < piles; i++){
         if(pileDeck[i]->GetColorCount(color) > 0)
             return pileDeck[i];
@@ -447,7 +445,7 @@ Deck *GameState::GetPileWithColor(int color) {
     return nullptr;
 }
 
-int GameState::GetPileIdWithColor(int color) {
+int GameState::GetPileIdWithColor(COLOR color) {
     for(int i = 0; i < piles; i++){
         if(pileDeck[i]->GetColorCount(color) > 0)
             return i;

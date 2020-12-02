@@ -238,10 +238,63 @@ GameState* generateState(Settings settings, int* values) {
 void validateState(GameState* gameState){
     gameState->DisplayValidationResult();
 }
-int main(int argc, char **argv) {
+
+void autoPlay(Settings settings){
     GameState *gameState;
+    int *values = getCardValues(settings.cardCount);
+    int* winners = new int[settings.players];
+    for(int i = 0; i < settings.players; i++){
+        winners[i] = 0;
+    }
+    for(int t = 0; t < settings.games; t++){
+        int* scores = new int[settings.players];
+        for(int i = 0; i < settings.players; i++){
+            scores[i] = 0;
+        }
+        int roundCounter = settings.rounds;
+        for(int i = roundCounter; i > 0; i--){
+            gameState = generateState(settings, values);
+            while(gameState->IsGameOver() == 0){
+                gameState->DisplayValidationResult();
+                play(gameState);
+                gameState->DisplayState();
+            }
+            gameState->DisplayScore();
+            for(int j = 0; j < settings.players; j++){
+                scores[j] += gameState->GetPlayerScore(j);
+            }
+            delete gameState;
+        }
+        int min = MAX_VALUE*MAX_CARDS_ON_HAND;
+        for(int i = 0; i < settings.players; i++){
+            if(scores[i] < min){
+                min = scores[i];
+            }
+        }
+        for(int i = 0; i < settings.players; i++){
+            printf("Player %i has %i points.\n", i+1, scores[i]);
+        }
+        for(int i = 0; i < settings.players;i++){
+            if(scores[i] == min){
+                winners[i]++;
+                printf("Player %i won!\n", i+1);
+            }
+
+        }
+        delete [] scores;
+    }
+    printf("Final results:\n");
+    for(int i = 0; i < settings.players; i++){
+        printf("Player %i won %i times.\n",i+1,winners[i]);
+    }
+    delete[] values;
+    delete[] winners;
+}
+
+int main(int argc, char **argv) {
     if (argc == 2) {
         if (argv[1][0] == 'g') {
+            GameState *gameState;
             freopen("gameState.txt", "w", stdout);
             const Settings settings = getSettings();
             int *values = getCardValues(settings.cardCount);
@@ -250,6 +303,7 @@ int main(int argc, char **argv) {
             delete gameState;
         }
         if (argv[1][0] == 'v') {
+            GameState *gameState;
             gameState = StateParser::ReadFromStream();
             freopen("validationResult.txt", "w", stdout);
             validateState(gameState);
@@ -257,57 +311,11 @@ int main(int argc, char **argv) {
         }
         if(argv[1][0] == 'a'){
             const Settings settings = getSettings();
-            int *values = getCardValues(settings.cardCount);
             freopen("gameLog.txt", "a", stdout);
-            int* winners = new int[settings.players];
-            for(int i = 0; i < settings.players; i++){
-                winners[i] = 0;
-            }
-            for(int t = 0; t < settings.games; t++){
-                int* scores = new int[settings.players];
-                for(int i = 0; i < settings.players; i++){
-                    scores[i] = 0;
-                }
-                int roundCounter = settings.rounds;
-                for(int i = roundCounter; i > 0; i--){
-                    gameState = generateState(settings, values);
-                    while(gameState->IsGameOver() == 0){
-                        gameState->DisplayValidationResult();
-                        play(gameState);
-                        gameState->DisplayState();
-                    }
-                    gameState->DisplayScore();
-                    for(int j = 0; j < settings.players; j++){
-                        scores[j] += gameState->GetPlayerScore(j);
-                    }
-                    delete gameState;
-                }
-                int min = MAX_VALUE*MAX_CARDS_ON_HAND;
-                for(int i = 0; i < settings.players; i++){
-                    if(scores[i] < min){
-                        min = scores[i];
-                    }
-                }
-                for(int i = 0; i < settings.players; i++){
-                    printf("Player %i has %i points.\n", i+1, scores[i]);
-                }
-                for(int i = 0; i < settings.players;i++){
-                    if(scores[i] == min){
-                        winners[i]++;
-                        printf("Player %i won!\n", i+1);
-                    }
-
-                }
-                delete [] scores;
-            }
-            printf("Final results:\n");
-            for(int i = 0; i < settings.players; i++){
-                printf("Player %i won %i times.\n",i+1,winners[i]);
-            }
-            delete[] values;
-            delete[] winners;
+            autoPlay(settings);
         }
     }else {
+        GameState *gameState;
         gameState = StateParser::ReadFromStream();
         freopen("gameState.txt", "w", stdout);
         play(gameState);
