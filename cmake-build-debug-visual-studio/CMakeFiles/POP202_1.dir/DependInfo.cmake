@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/mabat/CLionProjects/POP202_1/Deck.cpp" "C:/Users/mabat/CLionProjects/POP202_1/cmake-build-debug-visual-studio/CMakeFiles/POP202_1.dir/Deck.cpp.obj"
   "C:/Users/mabat/CLionProjects/POP202_1/GameState.cpp" "C:/Users/mabat/CLionProjects/POP202_1/cmake-build-debug-visual-studio/CMakeFiles/POP202_1.dir/GameState.cpp.obj"
+  "C:/Users/mabat/CLionProjects/POP202_1/Players.cpp" "C:/Users/mabat/CLionProjects/POP202_1/cmake-build-debug-visual-studio/CMakeFiles/POP202_1.dir/Players.cpp.obj"
   "C:/Users/mabat/CLionProjects/POP202_1/StateParser.cpp" "C:/Users/mabat/CLionProjects/POP202_1/cmake-build-debug-visual-studio/CMakeFiles/POP202_1.dir/StateParser.cpp.obj"
   "C:/Users/mabat/CLionProjects/POP202_1/main.cpp" "C:/Users/mabat/CLionProjects/POP202_1/cmake-build-debug-visual-studio/CMakeFiles/POP202_1.dir/main.cpp.obj"
   )

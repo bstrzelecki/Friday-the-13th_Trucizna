@@ -10,6 +10,12 @@ CMakeFiles\POP202_1.dir\GameState.cpp.obj: ..\GameState.cpp
 CMakeFiles\POP202_1.dir\GameState.cpp.obj: ..\GameState.h
 CMakeFiles\POP202_1.dir\GameState.cpp.obj: ..\statics.h
 
+CMakeFiles\POP202_1.dir\Players.cpp.obj: ..\Deck.h
+CMakeFiles\POP202_1.dir\Players.cpp.obj: ..\GameState.h
+CMakeFiles\POP202_1.dir\Players.cpp.obj: ..\Players.cpp
+CMakeFiles\POP202_1.dir\Players.cpp.obj: ..\Players.h
+CMakeFiles\POP202_1.dir\Players.cpp.obj: ..\statics.h
+
 CMakeFiles\POP202_1.dir\StateParser.cpp.obj: ..\Deck.h
 CMakeFiles\POP202_1.dir\StateParser.cpp.obj: ..\GameState.h
 CMakeFiles\POP202_1.dir\StateParser.cpp.obj: ..\StateParser.cpp
@@ -18,6 +24,7 @@ CMakeFiles\POP202_1.dir\StateParser.cpp.obj: ..\statics.h
 
 CMakeFiles\POP202_1.dir\main.cpp.obj: ..\Deck.h
 CMakeFiles\POP202_1.dir\main.cpp.obj: ..\GameState.h
+CMakeFiles\POP202_1.dir\main.cpp.obj: ..\Players.h
 CMakeFiles\POP202_1.dir\main.cpp.obj: ..\StateParser.h
 CMakeFiles\POP202_1.dir\main.cpp.obj: ..\main.cpp
 CMakeFiles\POP202_1.dir\main.cpp.obj: ..\statics.h

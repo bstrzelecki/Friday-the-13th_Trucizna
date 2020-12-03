@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <cstdlib>
 #include "Deck.h"
-#include <time.h>
 
 void sort(int *array, int length) {
     auto swap =[](int* a, int* b){
@@ -23,7 +22,6 @@ void shuffle(Card* array, int length){
         *a = *b;
         *b = t;
     };
-    srand(time(nullptr));
     for(int i = 0; i < length; i++){
         int pos = rand()%length;
         swap(&array[i], &array[pos]);

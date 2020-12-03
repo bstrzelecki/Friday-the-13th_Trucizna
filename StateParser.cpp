@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <cstdlib>
 #include "StateParser.h"
 
 #define COLOR_MAX_LENGTH 8
@@ -75,6 +76,23 @@ int getCrucibleCount(Card cardsOnHand[MAX_PLAYERS][MAX_CARDS_ON_HAND], Card card
     }
     return uniqueColors;
 }
+int* StateParser::GetCardValues(int count) {
+    int *values = new int[count];
+    int input;
+    for (int i = 0; i < count; i++) {
+        scanf("%i", &input);
+        values[i] = input;
+    }
+    return values;
+}
+
+Settings StateParser::GetSettingsFromStream() {
+    int n, k, g, gv, o, e, t;
+    scanf("%i %i %i %i %i %i %i", &n, &k, &g, &gv, &o, &e, &t);
+    return {
+            n, k, g, gv, o, g + k * o, e, 0, t
+    };
+}
 
 GameState *StateParser::ReadFromStream() {
     int playersNumber;
@@ -119,4 +137,24 @@ GameState *StateParser::ReadFromStream() {
             activePlayer
     };
     return new GameState(settings, cardsOnHand, cardsInDeck, cardsOnPiles, cardsGiven, cardsOnHold, numberCardOnPiles);
+}
+
+Settings StateParser::GetSettingsFromArgs(int argc, char **argv) {
+    int players = atoi(argv[2]);
+    int crucibles = atoi(argv[3]);
+    int explosionThreshold = atoi(argv[4]);
+    int greenCards = atoi(argv[5]);
+    int greenCardValue = atoi(argv[6]);
+    int cards = atoi(argv[8]);
+    Settings settings{
+            players,
+            crucibles,
+            greenCardValue,
+            cards,
+            greenCards + cards,
+            explosionThreshold,
+            0,
+            1
+    };
+    return settings;
 }

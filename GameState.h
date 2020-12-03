@@ -45,19 +45,21 @@ public:
     // Output: number of currently acting player
     int GetActivePlayer() const;
 
-    int GetExplosionThreshold();
+    void AdvanceActivePlayer(int player);
+
+    int GetExplosionThreshold() const;
 
     int GetPlayerScore(int player);
 
-    VALIDATION_RESULT ValidateGreenCards();
+    VALIDATION_RESULT ValidateGreenCards(int verbose = 1);
 
-    VALIDATION_RESULT ValidateCards();
+    VALIDATION_RESULT ValidateCards(int verbose = 1);
 
-    VALIDATION_RESULT ValidateCardValues();
+    VALIDATION_RESULT ValidateCardValues(int verbose = 1);
 
-    VALIDATION_RESULT ValidateHands();
+    VALIDATION_RESULT ValidateHands(int verbose = 1);
 
-    VALIDATION_RESULT ValidatePiles();
+    VALIDATION_RESULT ValidatePiles(int verbose = 1);
 
     ~GameState();
 

@@ -181,6 +181,33 @@ GameState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\POP202_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\POP202_1.dir\GameState.cpp.s
 .PHONY : GameState.cpp.s
 
+Players.obj: Players.cpp.obj
+
+.PHONY : Players.obj
+
+# target to build an object file
+Players.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POP202_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\POP202_1.dir\Players.cpp.obj
+.PHONY : Players.cpp.obj
+
+Players.i: Players.cpp.i
+
+.PHONY : Players.i
+
+# target to preprocess a source file
+Players.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POP202_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\POP202_1.dir\Players.cpp.i
+.PHONY : Players.cpp.i
+
+Players.s: Players.cpp.s
+
+.PHONY : Players.s
+
+# target to generate assembly for a file
+Players.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POP202_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\POP202_1.dir\Players.cpp.s
+.PHONY : Players.cpp.s
+
 StateParser.obj: StateParser.cpp.obj
 
 .PHONY : StateParser.obj
@@ -250,6 +277,9 @@ help:
 	@echo ... GameState.obj
 	@echo ... GameState.i
 	@echo ... GameState.s
+	@echo ... Players.obj
+	@echo ... Players.i
+	@echo ... Players.s
 	@echo ... StateParser.obj
 	@echo ... StateParser.i
 	@echo ... StateParser.s

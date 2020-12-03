@@ -1,247 +1,35 @@
 #include <cstdio>
+#include <ctime>
+#include <cstdlib>
 #include "statics.h"
 #include "GameState.h"
 #include "StateParser.h"
+#include "Players.h"
 
-GameState *getState(GameState *gameState);
-
-int *getCardValues(int count) {
-    int *values = new int[count];
-    int input;
-    for (int i = 0; i < count; i++) {
-        scanf("%i", &input);
-        values[i] = input;
-    }
-    return values;
-}
-
-Settings getSettings() {
-    int n, k, g, gv, o, e, r, t;
-    scanf("%i %i %i %i %i %i %i %i", &n, &k, &g, &gv, &o, &e, &r, &t);
-    return {
-            n, k, g, gv, o, g + k * o, e, 0, r, t
-    };
-}
-void dumb(GameState* gameState){
-    gameState->Play(0);
-}
-
-void highestCardCount(GameState* gameState){
-    Deck* deck = gameState->GetActivePlayerDeck();
-    Deck* hand = gameState->GetActiveHand();
-
-    int maxCards = 0;
-    int maxCardsIndex = -1;
-    int cardIndex = -1;
-
-    for(int i = 0; i < gameState->GetPileCount();i++){
-        if(gameState->GetPile(i)->GetContainedColor() <= 0)continue;
-        int count = gameState->GetPile(i)->GetNonGreenCardCount() + deck->GetColorCount(gameState->GetPile(i)->GetContainedColor());
-        if(count > maxCards){
-            int explosionCost = gameState->GetExplosionThreshold() - gameState->GetPile(i)->GetCardsValue();
-            int explosionColor = gameState->GetPile(i)->GetContainedColor();
-            for(int j = 0; j < hand->GetCardsCount(); j++){
-                if((hand->PeekCard(j).color == GREEN || hand->PeekCard(j).color == explosionColor) && hand->PeekCard(j).value >= explosionCost){
-                    maxCards = count;
-                    maxCardsIndex = i;
-                    cardIndex = j;
-                }
-            }
-        }
-    }
-    gameState->Play(cardIndex, maxCardsIndex);
-}
-
-void avoidExplosion(GameState* gameState){
-    Deck* hand = gameState->GetActiveHand();
-    for(int i = 0; i < hand->GetCardsCount();i++){
-        for(int j = 0 ; j < gameState->GetPileCount(); j++){
-            Card card = hand->PeekCard(i);
-            if(card.value + gameState->GetPile(j)->GetCardsValue() < gameState->GetExplosionThreshold()){
-                if(card.color == GREEN){
-                    gameState->Play(i,j);
-                    return;
-                }
-                if(card.color == gameState->GetPile(j)->GetContainedColor()){
-                    gameState->Play(i,j);
-                    return;
-                }
-            }
-        }
-    }
-    highestCardCount(gameState);
-}
-
-void highestCard(GameState* gameState){
-    Deck* deck = gameState->GetActiveHand();
-    int maxIndex = -1;
-    int max = 0;
-    int minPile = -1;
-    int maxCount = MAX_VALUE * MAX_CARDS_ON_HAND;
-    for(int i = 0; i < deck->GetCardsCount();i++){
-        int value = deck->PeekCard(i).value;
-        if(value > max){
-            max = value;
-            maxIndex = i;
-
-            Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
-            if(pile != nullptr){
-                maxCount = pile->GetCardsCount();
-                minPile = gameState->GetPileIdWithColor(deck->PeekCard(i).color);
-            }else{
-                for(int j = 0; j < gameState->GetPileCount();j++){
-                    int v = gameState->GetPile(j)->GetCardsCount();
-                    if(maxCount > v){
-                        maxCount = v;
-                        minPile = j;
-                    }
-                }
-            }
-        }
-        if(value == max){
-            int newPile = -1;
-            int newCount = MAX_VALUE * MAX_CARDS_ON_HAND;
-            Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
-            if(pile != nullptr){
-                newCount = pile->GetCardsCount();
-                newPile = gameState->GetPileIdWithColor(deck->PeekCard(i).color);
-            }else{
-                for(int j = 0; j < gameState->GetPileCount();j++){
-                    int v = gameState->GetPile(j)->GetCardsCount();
-                    if(newCount > v){
-                        newCount = v;
-                        newPile = j;
-                    }
-                }
-            }
-            if(newCount < maxCount){
-                maxIndex = i;
-                minPile = newPile;
-                maxCount = newCount;
-            }
-        }
-    }
-    gameState->Play(maxIndex, minPile);
-}
-
-void optimalCard(GameState* gameState){
-    Deck* deck = gameState->GetActiveHand();
-    int max = 0;
-    int maxIndex = -1;
-    int minPile = -1;
-    for(int i =0; i < deck->GetCardsCount(); i++){
-        int value = deck->PeekCard(i).value;
-        if(value >= max){
-            max = value;
-            int minValue = MAX_VALUE * MAX_CARDS_ON_HAND;
-            Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
-            if(pile != nullptr){
-                minPile = gameState->GetPileIdWithColor(deck->PeekCard(i).color);
-            }else{
-                for(int j = 0; j < gameState->GetPileCount();j++){
-                    int v = gameState->GetPile(j)->GetCardsValue();
-                    if(minValue > v){
-                        minValue = v;
-                        minPile = j;
-                    }
-                }
-            }
-            if(gameState->GetPile(minPile)->GetCardsValue() + deck->PeekCard(i).value > gameState->GetExplosionThreshold()){
-                continue;
-            }else{
-                maxIndex = i;
-            }
-        }
-    }
-    if(maxIndex == -1 || minPile == -1)
-        highestCard(gameState);
-    else
-        gameState->Play(maxIndex, minPile);
-}
-
-void lowestCard(GameState* gameState){
-    Deck* deck = gameState->GetActiveHand();
-    int minIndex = -1;
-    int min = MAX_VALUE;
-    int minPile = -1;
-    int minValue = MAX_VALUE * MAX_CARDS_ON_HAND;
-    for(int i = 0; i < deck->GetCardsCount();i++){
-        int value = deck->PeekCard(i).value;
-        if(value < min){
-            min = value;
-            minIndex = i;
-
-            Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
-            if(pile != nullptr){
-                minValue = pile->GetCardsValue();
-                minPile = gameState->GetPileIdWithColor(deck->PeekCard(i).color);
-            }else{
-                for(int j = 0; j < gameState->GetPileCount();j++){
-                    int v = gameState->GetPile(j)->GetCardsValue();
-                    if(minValue > v){
-                        minValue = v;
-                        minPile = j;
-                    }
-                }
-            }
-        }
-        if(value == min){
-            int newPile = -1;
-            int newValue = MAX_VALUE*MAX_CARDS_ON_HAND;
-            Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
-            if(pile != nullptr){
-                newValue = pile->GetCardsValue();
-                newPile = gameState->GetPileIdWithColor(deck->PeekCard(i).color);
-            }else{
-                for(int j = 0; j < gameState->GetPileCount();j++){
-                    int v = gameState->GetPile(j)->GetCardsValue();
-                    if(newValue > v){
-                        newValue = v;
-                        newPile = j;
-                    }
-                }
-            }
-            if(newValue < minValue){
-                minIndex = i;
-                minPile = newPile;
-                minValue = newValue;
-            }
-        }
-    }
-    if((minIndex == -1 || minPile == -1) || gameState->GetPile(minPile)->GetCardsValue() + gameState->GetActiveHand()->PeekCard(minIndex).value > gameState->GetExplosionThreshold()){
-        highestCard(gameState);
-        return;
-    }
-    gameState->Play(minIndex,minPile);
-}
 void play(GameState* gameState) {
 
 
     void (*playerAction[])(GameState*) = {
-        dumb,
-        optimalCard,
-        lowestCard,
-        dumb,
-        lowestCard,
-        lowestCard,
-        lowestCard,
-        dumb
+        Players::optimalCard,
+        Players::avoidExplosion,
+        Players::lowestCard,
+        Players::dumb,
+        Players::lowestCard,
+        Players::lowestCard,
+        Players::lowestCard,
+        Players::dumb
     };
     playerAction[gameState->GetActivePlayer()](gameState);
 }
 
 GameState* generateState(Settings settings, int* values) {
     auto* gameState = new GameState(settings, new Deck(settings, values));
-    gameState->DisplayState();
     return gameState;
-}
-void validateState(GameState* gameState){
-    gameState->DisplayValidationResult();
 }
 
 void autoPlay(Settings settings){
     GameState *gameState;
-    int *values = getCardValues(settings.cardCount);
+    int *values = StateParser::GetCardValues(settings.cardCount);
     int* winners = new int[settings.players];
     for(int i = 0; i < settings.players; i++){
         winners[i] = 0;
@@ -251,9 +39,10 @@ void autoPlay(Settings settings){
         for(int i = 0; i < settings.players; i++){
             scores[i] = 0;
         }
-        int roundCounter = settings.rounds;
-        for(int i = roundCounter; i > 0; i--){
+        for(int i = 0; i < settings.players; i++){
             gameState = generateState(settings, values);
+            gameState->AdvanceActivePlayer(i);
+            gameState->DisplayState();
             while(gameState->IsGameOver() == 0){
                 gameState->DisplayValidationResult();
                 play(gameState);
@@ -291,14 +80,27 @@ void autoPlay(Settings settings){
     delete[] winners;
 }
 
+// g - generates GameState and saves it as gameState.txt
+// v - validates validates given GameState and saves results in validationResult.txt
+// a - executes multiple games and saves results to gameLog.txt
 int main(int argc, char **argv) {
-    if (argc == 2) {
+    srand(time(nullptr));
+    if(argc > 2){
+        freopen(argv[1], "r", stdin);
+        GameState* gameState = StateParser::ReadFromStream();
+        Players::optimalCard(gameState);
+        freopen(argv[1], "w", stdout);
+        gameState->DisplayState();
+        delete gameState;
+    }
+    else if (argc == 2) {
         if (argv[1][0] == 'g') {
-            GameState *gameState;
             freopen("gameState.txt", "w", stdout);
-            const Settings settings = getSettings();
-            int *values = getCardValues(settings.cardCount);
+            const Settings settings = StateParser::GetSettingsFromStream();
+            GameState *gameState;
+            int *values = StateParser::GetCardValues(settings.cardCount);
             gameState = generateState(settings, values);
+            gameState->DisplayState();
             delete[] values;
             delete gameState;
         }
@@ -306,11 +108,11 @@ int main(int argc, char **argv) {
             GameState *gameState;
             gameState = StateParser::ReadFromStream();
             freopen("validationResult.txt", "w", stdout);
-            validateState(gameState);
+            gameState->DisplayValidationResult();
             delete gameState;
         }
         if(argv[1][0] == 'a'){
-            const Settings settings = getSettings();
+            const Settings settings = StateParser::GetSettingsFromStream();
             freopen("gameLog.txt", "a", stdout);
             autoPlay(settings);
         }

@@ -10,6 +10,12 @@ CMakeFiles/POP202_1.dir/GameState.cpp.obj
  C:/Users/mabat/CLionProjects/POP202_1/GameState.cpp
  C:/Users/mabat/CLionProjects/POP202_1/GameState.h
  C:/Users/mabat/CLionProjects/POP202_1/statics.h
+CMakeFiles/POP202_1.dir/Players.cpp.obj
+ C:/Users/mabat/CLionProjects/POP202_1/Deck.h
+ C:/Users/mabat/CLionProjects/POP202_1/GameState.h
+ C:/Users/mabat/CLionProjects/POP202_1/Players.cpp
+ C:/Users/mabat/CLionProjects/POP202_1/Players.h
+ C:/Users/mabat/CLionProjects/POP202_1/statics.h
 CMakeFiles/POP202_1.dir/StateParser.cpp.obj
  C:/Users/mabat/CLionProjects/POP202_1/Deck.h
  C:/Users/mabat/CLionProjects/POP202_1/GameState.h
@@ -19,6 +25,7 @@ CMakeFiles/POP202_1.dir/StateParser.cpp.obj
 CMakeFiles/POP202_1.dir/main.cpp.obj
  C:/Users/mabat/CLionProjects/POP202_1/Deck.h
  C:/Users/mabat/CLionProjects/POP202_1/GameState.h
+ C:/Users/mabat/CLionProjects/POP202_1/Players.h
  C:/Users/mabat/CLionProjects/POP202_1/StateParser.h
  C:/Users/mabat/CLionProjects/POP202_1/main.cpp
  C:/Users/mabat/CLionProjects/POP202_1/statics.h

@@ -23,7 +23,7 @@
 
 #define MEMTEST(x) if((x)==nullptr){printf("MEMORY ERROR");}
 
-inline const char *colors[] = {
+inline const char* const colors[] = {
         "green",
         "blue",
         "red",
@@ -46,7 +46,6 @@ typedef struct {
     int totalCards;
     int explosionThreshold;
     int activePlayer;
-    int rounds;
     int games;
 } Settings;
 

@@ -132,7 +132,7 @@ VALIDATION_RESULT GameState::checkGreenCardValue(Deck *deck, int *greenValue) {
     return VALIDATION_SUCCESS;
 }
 
-VALIDATION_RESULT GameState::ValidateGreenCards() {
+VALIDATION_RESULT GameState::ValidateGreenCards(int verbose) {
     int greenValue = -1;
     int greenCount = checkGreenCardCount();
     if (greenCount == 0)
@@ -150,12 +150,12 @@ VALIDATION_RESULT GameState::ValidateGreenCards() {
         if (result == VALIDATION_ERROR)
             return VALIDATION_ERROR;
     }
-    printf("Found %i green cards, all with %i value\n", greenCount, greenValue);
+    if(verbose != 0)printf("Found %i green cards, all with %i value\n", greenCount, greenValue);
     return VALIDATION_SUCCESS;
 
 }
 
-VALIDATION_RESULT GameState::ValidateCards() {
+VALIDATION_RESULT GameState::ValidateCards(int verbose) {
     int count[COLORS] = {};
     for (int i = 0; i < playersNumber; i++) {
         for (int j = 0; j < COLORS; j++) {
@@ -173,10 +173,10 @@ VALIDATION_RESULT GameState::ValidateCards() {
         for (int j = 1; j < COLORS; j++) {
             if (i == j)continue;
             if (count[i] != 0 && count[j] != 0 && count[i] != count[j]) {
-                printf("At least two colors with a different number of cards were found:\n");
+                if(verbose != 0)printf("At least two colors with a different number of cards were found:\n");
                 for (int k = 1; k < COLORS; k++) {
                     if (count[k] != 0) {
-                        printf("%s cards are %i\n", colors[k], count[k]);
+                        if(verbose != 0)printf("%s cards are %i\n", colors[k], count[k]);
                     }
                 }
                 return VALIDATION_ERROR;
@@ -185,7 +185,7 @@ VALIDATION_RESULT GameState::ValidateCards() {
     }
     int i = 1;
     while (count[i] == 0)i++;
-    printf("The number cards of all colors is equal: %i\n", count[i]);
+    if(verbose != 0)printf("The number cards of all colors is equal: %i\n", count[i]);
     return VALIDATION_SUCCESS;
 }
 
@@ -201,7 +201,7 @@ void displayColorValues(int valueCount[COLORS][MAX_VALUE]) {
     }
 }
 
-VALIDATION_RESULT GameState::ValidateCardValues() {
+VALIDATION_RESULT GameState::ValidateCardValues(int verbose) {
     int valueCount[COLORS][MAX_VALUE] = {};
     for (int i = 0; i < playersNumber; i++) {
         for (int j = 0; j < playerHand[i]->GetCardsCount(); j++) {
@@ -224,24 +224,24 @@ VALIDATION_RESULT GameState::ValidateCardValues() {
             if (i == j)continue;
             for (int k = 0; k < MAX_VALUE; k++) {
                 if (valueCount[i][k] != valueCount[j][k]) {
-                    printf("The values of cards of all colors are not identical:\n");
+                    if(verbose != 0)printf("The values of cards of all colors are not identical:\n");
                     displayColorValues(valueCount);
                     return VALIDATION_ERROR;
                 }
             }
         }
     }
-    printf("The values of cards of all colors are identical:\n");
+    if(verbose != 0)printf("The values of cards of all colors are identical:\n");
     for (int j = 0; j < MAX_VALUE; j++) {
         for (int k = 0; k < valueCount[BLUE][j]; k++) {
-            printf("%i ", j);
+            if(verbose != 0)printf("%i ", j);
         }
     }
-    printf("\n");
+    if(verbose != 0)printf("\n");
     return VALIDATION_SUCCESS;
 }
 
-VALIDATION_RESULT GameState::ValidatePiles() {
+VALIDATION_RESULT GameState::ValidatePiles(int verbose) {
     int valid = VALIDATION_SUCCESS;
     for (int i = 0; i < piles; i++) {
         int col = 0;
@@ -251,7 +251,7 @@ VALIDATION_RESULT GameState::ValidatePiles() {
                 if (col == 0) {
                     col = j;
                 } else {
-                    printf("Two different colors were found on the %i pile\n", i + 1);
+                    if(verbose != 0)printf("Two different colors were found on the %i pile\n", i + 1);
                     valid = VALIDATION_ERROR;
                     break;
                 }
@@ -260,14 +260,14 @@ VALIDATION_RESULT GameState::ValidatePiles() {
     }
     for (int i = 0; i < piles; i++) {
         if (pileDeck[i]->GetCardsValue() > explosionThreshold) {
-            printf("Pile number %i should explode earlier\n", i + 1);
+            if(verbose != 0)printf("Pile number %i should explode earlier\n", i + 1);
             valid = VALIDATION_ERROR;
         }
     }
     return valid;
 }
 
-VALIDATION_RESULT GameState::ValidateHands() {
+VALIDATION_RESULT GameState::ValidateHands(int verbose) {
     for (int i = 0; i < playersNumber - 1; i++) {
         if (playerHand[i]->GetCardsCount() == playerHand[i + 1]->GetCardsCount()) {
             continue;
@@ -278,7 +278,7 @@ VALIDATION_RESULT GameState::ValidateHands() {
         if ((i + 1) == (activePlayer) && playerHand[i]->GetCardsCount() == (playerHand[i + 1]->GetCardsCount() - 1)) {
             continue;
         }
-        printf("The number of players cards on hand is wrong\n");
+        if(verbose != 0)printf("The number of players cards on hand is wrong\n");
         return VALIDATION_ERROR;
     }
     return VALIDATION_SUCCESS;
@@ -287,7 +287,6 @@ VALIDATION_RESULT GameState::ValidateHands() {
 void GameState::Play(int cardPosition, int defaultPile) {
     int currentPlayer = activePlayer;
     if(cardPosition == -1 || defaultPile == -1){
-        printf("ISSUE");
         cardPosition = 0;
         defaultPile = 0;
     }
@@ -367,7 +366,7 @@ int* GameState::getPlayerImmunity(int player) {
         }
         max[i] = localMax;
     }
-    int* immunity = new int[playersNumber];
+    int* immunity = new int[COLORS];
     for (int i = 1; i < COLORS; i++) {
         if (max[i] == player) {
             immunity[i] = 1;
@@ -453,7 +452,7 @@ int GameState::GetPileIdWithColor(COLOR color) {
     return -1;
 }
 
-int GameState::GetExplosionThreshold() {
+int GameState::GetExplosionThreshold() const{
     return explosionThreshold;
 }
 
@@ -463,6 +462,12 @@ Deck *GameState::GetActivePlayerDeck() {
 
 int GameState::GetActivePlayer() const {
     return activePlayer;
+}
+
+void GameState::AdvanceActivePlayer(int player) {
+    activePlayer += player;
+    if(activePlayer > playersNumber)
+        activePlayer = playersNumber - activePlayer;
 }
 
 

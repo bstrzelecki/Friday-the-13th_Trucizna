@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/POP202_1.dir/Deck.cpp.obj"
   "CMakeFiles/POP202_1.dir/GameState.cpp.obj"
+  "CMakeFiles/POP202_1.dir/Players.cpp.obj"
   "CMakeFiles/POP202_1.dir/StateParser.cpp.obj"
   "CMakeFiles/POP202_1.dir/main.cpp.obj"
   "POP202_1.exe"
