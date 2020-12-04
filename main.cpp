@@ -95,7 +95,7 @@ int main(int argc, char **argv) {
     }
     else if (argc == 2) {
         if (argv[1][0] == 'g') {
-            freopen("gameState.txt", "w", stdout);
+            freopen(STATE_FILE, "w", stdout);
             const Settings settings = StateParser::GetSettingsFromStream();
             GameState *gameState;
             int *values = StateParser::GetCardValues(settings.cardCount);
@@ -107,23 +107,23 @@ int main(int argc, char **argv) {
         if (argv[1][0] == 'v') {
             GameState *gameState;
             gameState = StateParser::ReadFromStream();
-            freopen("validationResult.txt", "w", stdout);
+            freopen(VALIDATION_OUTPUT_FILE, "w", stdout);
             gameState->DisplayValidationResult();
             delete gameState;
         }
         if(argv[1][0] == 'a'){
             const Settings settings = StateParser::GetSettingsFromStream();
-            freopen("gameLog.txt", "a", stdout);
+            freopen(LOG_FILE, "a", stdout);
             autoPlay(settings);
         }
     }else {
         GameState *gameState;
         gameState = StateParser::ReadFromStream();
-        freopen("gameState.txt", "w", stdout);
+        freopen(STATE_FILE, "w", stdout);
         play(gameState);
         gameState->DisplayState();
         if(gameState->IsGameOver() == 1){
-            freopen("finalScore.txt", "w", stdout);
+            freopen(SCORE_FILE, "w", stdout);
             gameState->DisplayScore();
         }
         delete gameState;

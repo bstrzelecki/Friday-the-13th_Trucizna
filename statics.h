@@ -18,8 +18,12 @@
 #define VIOLET 3
 #define YELLOW 4
 #define WHITE 5
-
 #define BLACK 6
+
+#define LOG_FILE "gameLog.txt"
+#define STATE_FILE "gameState.txt"
+#define SCORE_FILE "finalScore.txt"
+#define VALIDATION_OUTPUT_FILE "validationResult.txt"
 
 #define MEMTEST(x) if((x)==nullptr){printf("MEMORY ERROR");}
 
