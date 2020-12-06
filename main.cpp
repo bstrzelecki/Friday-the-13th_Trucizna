@@ -7,17 +7,29 @@
 #include "Players.h"
 
 void play(GameState* gameState) {
-
-
     void (*playerAction[])(GameState*) = {
-        Players::optimalCard,
-        Players::avoidExplosion,
-        Players::lowestCard,
-        Players::dumb,
-        Players::lowestCard,
-        Players::lowestCard,
-        Players::lowestCard,
-        Players::dumb
+            Players::lowestCard,
+            Players::avoidExplosion,
+            Players::optimalCard,
+            Players::dumb,
+            Players::lowestCard,
+            Players::lowestCard,
+            Players::lowestCard,
+            Players::dumb,
+            Players::optimalCard,
+            Players::avoidExplosion,
+            Players::lowestCard,
+            Players::dumb,
+            Players::lowestCard,
+            Players::lowestCard,
+            Players::lowestCard,
+            Players::dumb,
+            Players::optimalCard,
+            Players::avoidExplosion,
+            Players::lowestCard,
+            Players::optimalCard,
+            Players::avoidExplosion,
+            Players::lowestCard
     };
     playerAction[gameState->GetActivePlayer()](gameState);
 }
@@ -25,6 +37,21 @@ void play(GameState* gameState) {
 GameState* generateState(Settings settings, int* values) {
     auto* gameState = new GameState(settings, new Deck(settings, values));
     return gameState;
+}
+void executePlayersMove(int startingPlayer, Settings settings, int* scores, int* values){
+    GameState* gameState = generateState(settings, values);
+    gameState->AdvanceActivePlayer(startingPlayer);
+    gameState->DisplayState();
+    while(gameState->IsGameOver() == 0){
+        gameState->DisplayValidationResult();
+        play(gameState);
+        gameState->DisplayState();
+    }
+    gameState->DisplayScore();
+    for(int j = 0; j < settings.players; j++){
+        scores[j] += gameState->GetPlayerScore(j);
+    }
+    delete gameState;
 }
 
 void autoPlay(Settings settings){
@@ -34,26 +61,16 @@ void autoPlay(Settings settings){
     for(int i = 0; i < settings.players; i++){
         winners[i] = 0;
     }
+
     for(int t = 0; t < settings.games; t++){
         int* scores = new int[settings.players];
         for(int i = 0; i < settings.players; i++){
             scores[i] = 0;
         }
         for(int i = 0; i < settings.players; i++){
-            gameState = generateState(settings, values);
-            gameState->AdvanceActivePlayer(i);
-            gameState->DisplayState();
-            while(gameState->IsGameOver() == 0){
-                gameState->DisplayValidationResult();
-                play(gameState);
-                gameState->DisplayState();
-            }
-            gameState->DisplayScore();
-            for(int j = 0; j < settings.players; j++){
-                scores[j] += gameState->GetPlayerScore(j);
-            }
-            delete gameState;
+            executePlayersMove(i, settings, scores,values);
         }
+        // Finds winner
         int min = MAX_VALUE*MAX_CARDS_ON_HAND;
         for(int i = 0; i < settings.players; i++){
             if(scores[i] < min){
@@ -72,6 +89,7 @@ void autoPlay(Settings settings){
         }
         delete [] scores;
     }
+
     printf("Final results:\n");
     for(int i = 0; i < settings.players; i++){
         printf("Player %i won %i times.\n",i+1,winners[i]);
@@ -83,6 +101,7 @@ void autoPlay(Settings settings){
 // g - generates GameState and saves it as gameState.txt
 // v - validates validates given GameState and saves results in validationResult.txt
 // a - executes multiple games and saves results to gameLog.txt
+// default - executes single move from saved GameState
 int main(int argc, char **argv) {
     srand(time(nullptr));
     if(argc > 2){

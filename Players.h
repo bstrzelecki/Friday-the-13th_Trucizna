@@ -1,7 +1,3 @@
-//
-// Created by mabat on 03/12/2020.
-//
-
 #ifndef POP202_1_PLAYERS_H
 #define POP202_1_PLAYERS_H
 

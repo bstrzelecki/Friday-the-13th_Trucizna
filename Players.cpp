@@ -1,7 +1,3 @@
-//
-// Created by mabat on 03/12/2020.
-//
-
 #include "Players.h"
 void Players::dumb(GameState* gameState){
     gameState->Play(0);
@@ -53,6 +49,22 @@ void Players::avoidExplosion(GameState* gameState){
     Players::highestCardCount(gameState);
 }
 
+void getPileWithHighestNumberOfColorCards(GameState* gameState, int color, int* count, int* pileNumber){
+    Deck* pile = gameState->GetPileWithColor(color);
+    if(pile != nullptr){
+        *count = pile->GetCardsCount();
+        *pileNumber = gameState->GetPileIdWithColor(color);
+    }else{
+        for(int j = 0; j < gameState->GetPileCount();j++){
+            int v = gameState->GetPile(j)->GetCardsCount();
+            if(*count > v){
+                *count = v;
+                *pileNumber = j;
+            }
+        }
+    }
+}
+
 void Players::highestCard(GameState* gameState){
     Deck* deck = gameState->GetActiveHand();
     int maxIndex = -1;
@@ -64,37 +76,13 @@ void Players::highestCard(GameState* gameState){
         if(value > max){
             max = value;
             maxIndex = i;
-
-            Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
-            if(pile != nullptr){
-                maxCount = pile->GetCardsCount();
-                minPile = gameState->GetPileIdWithColor(deck->PeekCard(i).color);
-            }else{
-                for(int j = 0; j < gameState->GetPileCount();j++){
-                    int v = gameState->GetPile(j)->GetCardsCount();
-                    if(maxCount > v){
-                        maxCount = v;
-                        minPile = j;
-                    }
-                }
-            }
+            getPileWithHighestNumberOfColorCards(gameState, deck->PeekCard(i).color, &maxCount, &minPile);
         }
         if(value == max){
             int newPile = -1;
             int newCount = MAX_VALUE * MAX_CARDS_ON_HAND;
-            Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
-            if(pile != nullptr){
-                newCount = pile->GetCardsCount();
-                newPile = gameState->GetPileIdWithColor(deck->PeekCard(i).color);
-            }else{
-                for(int j = 0; j < gameState->GetPileCount();j++){
-                    int v = gameState->GetPile(j)->GetCardsCount();
-                    if(newCount > v){
-                        newCount = v;
-                        newPile = j;
-                    }
-                }
-            }
+
+            getPileWithHighestNumberOfColorCards(gameState, deck->PeekCard(i).color, &newCount, &newPile);
             if(newCount < maxCount){
                 maxIndex = i;
                 minPile = newPile;
@@ -113,7 +101,6 @@ void Players::optimalCard(GameState* gameState){
     for(int i =0; i < deck->GetCardsCount(); i++){
         int value = deck->PeekCard(i).value;
         if(value >= max){
-            max = value;
             int minValue = MAX_VALUE * MAX_CARDS_ON_HAND;
             Deck* pile = gameState->GetPileWithColor(deck->PeekCard(i).color);
             if(pile != nullptr){
@@ -131,6 +118,7 @@ void Players::optimalCard(GameState* gameState){
                 continue;
             }else{
                 maxIndex = i;
+                max = value;
             }
         }
     }

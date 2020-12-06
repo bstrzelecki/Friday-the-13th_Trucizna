@@ -139,7 +139,7 @@ GameState *StateParser::ReadFromStream() {
     return new GameState(settings, cardsOnHand, cardsInDeck, cardsOnPiles, cardsGiven, cardsOnHold, numberCardOnPiles);
 }
 
-Settings StateParser::GetSettingsFromArgs(int argc, char **argv) {
+Settings StateParser::GetSettingsFromArgs(char **argv) {
     int players = atoi(argv[2]);
     int crucibles = atoi(argv[3]);
     int explosionThreshold = atoi(argv[4]);

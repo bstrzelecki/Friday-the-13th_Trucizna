@@ -9,7 +9,7 @@ public:
     static GameState *ReadFromStream();
     static int* GetCardValues(int count);
     static Settings GetSettingsFromStream();
-    static Settings GetSettingsFromArgs(int argc, char **argv);
+    static Settings GetSettingsFromArgs(char **argv);
 };
 
 
